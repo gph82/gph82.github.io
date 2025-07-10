@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>The Journey of Data: Lessons Learned in Modeling Kinase Affinity, Selectivity, and Resistance [Article v1.0] | Guillermo Pérez-Hernández</title>
+<meta name="keywords" content="">
+<meta name="description" content="Recent advances in machine learning (ML) are reshaping drug discovery. Structure-based ML methods use physically-inspired models to predict binding aﬃnities from protein:ligand complexes. These methods promise to enable the integration of data for many related targets, which addresses issues related to data scarcity for single targets and could enable generalizable predictions for a broad range of targets, including mutations. In this work, we report our experiences in building KinoML, a novel framework for ML in target-based small molecule drug discovery with an emphasis on structure-enabled methods. KinoML focuses currently on kinases as the relative structural conservation of this protein superfamily, particularly in the kinase domain, means it is possible to leverage data from the entire superfamily to make structure-informed predictions about binding affinities, selectivities, and drug resistance. Some key lessons learned in building KinoML include the importance of reproducible data collection and deposition, the harmonization of molecular data and featurization, and the selection of the right data format to ensure reusability and reproducibility of ML models. As a result, KinoML allows users to easily achieve three tasks: accessing and curating molecular data; featurizing this data with representations suitable for ML applications; and running reproducible ML experiments that require access to ligand, protein, and assay information to predict ligand affinity. Despite KinoML focusing on kinases, this framework can be applied to other proteins. The lessons reported here can help guide the development of platforms for structure-enabled ML in other areas of drug discovery.">
+<meta name="author" content="Raquel López-Ríos de Castro,&thinsp;Jaime Rodríguez-Guerra,&thinsp;David Schaller,&thinsp;Talia B. Kimber,&thinsp;Corey Taylor,&thinsp;Jessica B. White,&thinsp;Michael Backenköhler,&thinsp;Joschka Groß,&thinsp;Alexander M. Payne,&thinsp;Benjamin Kaminow,&thinsp;Ivan Pulido,&thinsp;Sukrit Singh,&thinsp;Paula Linh Kramer,&thinsp;Guillermo Pérez-Hernández,&thinsp;Andrea Volkamer,&thinsp;John D. Chodera">
+<link rel="canonical" href="https://gph82.github.io/papers/article_28/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.1d83721b120bc732b5bc8ea3ce28dc3f80e6d5d40345462ce6bae19959f4fd0f.css" integrity="sha256-HYNyGxILxzK1vI6jzijcP4Dm1dQDRUYs5rrhmVn0/Q8=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://gph82.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://gph82.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://gph82.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://gph82.github.io/apple-touch-icon.png">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://gph82.github.io/papers/article_28/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://gph82.github.io/papers/article_28/">
+  <meta property="og:site_name" content="Guillermo Pérez-Hernández">
+  <meta property="og:title" content="The Journey of Data: Lessons Learned in Modeling Kinase Affinity, Selectivity, and Resistance [Article v1.0]">
+  <meta property="og:description" content="Recent advances in machine learning (ML) are reshaping drug discovery. Structure-based ML methods use physically-inspired models to predict binding aﬃnities from protein:ligand complexes. These methods promise to enable the integration of data for many related targets, which addresses issues related to data scarcity for single targets and could enable generalizable predictions for a broad range of targets, including mutations. In this work, we report our experiences in building KinoML, a novel framework for ML in target-based small molecule drug discovery with an emphasis on structure-enabled methods. KinoML focuses currently on kinases as the relative structural conservation of this protein superfamily, particularly in the kinase domain, means it is possible to leverage data from the entire superfamily to make structure-informed predictions about binding affinities, selectivities, and drug resistance. Some key lessons learned in building KinoML include the importance of reproducible data collection and deposition, the harmonization of molecular data and featurization, and the selection of the right data format to ensure reusability and reproducibility of ML models. As a result, KinoML allows users to easily achieve three tasks: accessing and curating molecular data; featurizing this data with representations suitable for ML applications; and running reproducible ML experiments that require access to ligand, protein, and assay information to predict ligand affinity. Despite KinoML focusing on kinases, this framework can be applied to other proteins. The lessons reported here can help guide the development of platforms for structure-enabled ML in other areas of drug discovery.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="papers">
+    <meta property="article:published_time" content="2025-11-19T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-11-19T00:00:00+00:00">
+    <meta property="og:image" content="https://gph82.github.io/paper1.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://gph82.github.io/paper1.png">
+<meta name="twitter:title" content="The Journey of Data: Lessons Learned in Modeling Kinase Affinity, Selectivity, and Resistance [Article v1.0]">
+<meta name="twitter:description" content="Recent advances in machine learning (ML) are reshaping drug discovery. Structure-based ML methods use physically-inspired models to predict binding aﬃnities from protein:ligand complexes. These methods promise to enable the integration of data for many related targets, which addresses issues related to data scarcity for single targets and could enable generalizable predictions for a broad range of targets, including mutations. In this work, we report our experiences in building KinoML, a novel framework for ML in target-based small molecule drug discovery with an emphasis on structure-enabled methods. KinoML focuses currently on kinases as the relative structural conservation of this protein superfamily, particularly in the kinase domain, means it is possible to leverage data from the entire superfamily to make structure-informed predictions about binding affinities, selectivities, and drug resistance. Some key lessons learned in building KinoML include the importance of reproducible data collection and deposition, the harmonization of molecular data and featurization, and the selection of the right data format to ensure reusability and reproducibility of ML models. As a result, KinoML allows users to easily achieve three tasks: accessing and curating molecular data; featurizing this data with representations suitable for ML applications; and running reproducible ML experiments that require access to ligand, protein, and assay information to predict ligand affinity. Despite KinoML focusing on kinases, this framework can be applied to other proteins. The lessons reported here can help guide the development of platforms for structure-enabled ML in other areas of drug discovery.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Publications",
+      "item": "https://gph82.github.io/papers/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "The Journey of Data: Lessons Learned in Modeling Kinase Affinity, Selectivity, and Resistance [Article v1.0]",
+      "item": "https://gph82.github.io/papers/article_28/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "The Journey of Data: Lessons Learned in Modeling Kinase Affinity, Selectivity, and Resistance [Article v1.0]",
+  "name": "The Journey of Data: Lessons Learned in Modeling Kinase Affinity, Selectivity, and Resistance [Article v1.0]",
+  "description": "Recent advances in machine learning (ML) are reshaping drug discovery. Structure-based ML methods use physically-inspired models to predict binding aﬃnities from protein:ligand complexes. These methods promise to enable the integration of data for many related targets, which addresses issues related to data scarcity for single targets and could enable generalizable predictions for a broad range of targets, including mutations. In this work, we report our experiences in building KinoML, a novel framework for ML in target-based small molecule drug discovery with an emphasis on structure-enabled methods. KinoML focuses currently on kinases as the relative structural conservation of this protein superfamily, particularly in the kinase domain, means it is possible to leverage data from the entire superfamily to make structure-informed predictions about binding affinities, selectivities, and drug resistance. Some key lessons learned in building KinoML include the importance of reproducible data collection and deposition, the harmonization of molecular data and featurization, and the selection of the right data format to ensure reusability and reproducibility of ML models. As a result, KinoML allows users to easily achieve three tasks: accessing and curating molecular data; featurizing this data with representations suitable for ML applications; and running reproducible ML experiments that require access to ligand, protein, and assay information to predict ligand affinity. Despite KinoML focusing on kinases, this framework can be applied to other proteins. The lessons reported here can help guide the development of platforms for structure-enabled ML in other areas of drug discovery.",
+  "keywords": [
+    
+  ],
+  "articleBody": "Figure 4: KinoML workflow from data acquisition to featurization DOI 10.33011/livecoms.6.1.3875 Abstract Recent advances in machine learning (ML) are reshaping drug discovery. Structure-based ML methods use physically-inspired models to predict binding aﬃnities from protein:ligand complexes. These methods promise to enable the integration of data for many related targets, which addresses issues related to data scarcity for single targets and could enable generalizable predictions for a broad range of targets, including mutations. In this work, we report our experiences in building KinoML, a novel framework for ML in target-based small molecule drug discovery with an emphasis on structure-enabled methods. KinoML focuses currently on kinases as the relative structural conservation of this protein superfamily, particularly in the kinase domain, means it is possible to leverage data from the entire superfamily to make structure-informed predictions about binding affinities, selectivities, and drug resistance. Some key lessons learned in building KinoML include the importance of reproducible data collection and deposition, the harmonization of molecular data and featurization, and the selection of the right data format to ensure reusability and reproducibility of ML models. As a result, KinoML allows users to easily achieve three tasks: accessing and curating molecular data; featurizing this data with representations suitable for ML applications; and running reproducible ML experiments that require access to ligand, protein, and assay information to predict ligand affinity. Despite KinoML focusing on kinases, this framework can be applied to other proteins. The lessons reported here can help guide the development of platforms for structure-enabled ML in other areas of drug discovery.\n",
+  "wordCount" : "254",
+  "inLanguage": "en",
+  "image":"https://gph82.github.io/paper1.png","datePublished": "2025-11-19T00:00:00Z",
+  "dateModified": "2025-11-19T00:00:00Z",
+  "author":[{
+    "@type": "Person",
+    "name": "Raquel López-Ríos de Castro"
+  }, {
+    "@type": "Person",
+    "name": "Jaime Rodríguez-Guerra"
+  }, {
+    "@type": "Person",
+    "name": "David Schaller"
+  }, {
+    "@type": "Person",
+    "name": "Talia B. Kimber"
+  }, {
+    "@type": "Person",
+    "name": "Corey Taylor"
+  }, {
+    "@type": "Person",
+    "name": "Jessica B. White"
+  }, {
+    "@type": "Person",
+    "name": "Michael Backenköhler"
+  }, {
+    "@type": "Person",
+    "name": "Joschka Groß"
+  }, {
+    "@type": "Person",
+    "name": "Alexander M. Payne"
+  }, {
+    "@type": "Person",
+    "name": "Benjamin Kaminow"
+  }, {
+    "@type": "Person",
+    "name": "Ivan Pulido"
+  }, {
+    "@type": "Person",
+    "name": "Sukrit Singh"
+  }, {
+    "@type": "Person",
+    "name": "Paula Linh Kramer"
+  }, {
+    "@type": "Person",
+    "name": "\u003cb\u003eGuillermo Pérez-Hernández\u003c/b\u003e"
+  }, {
+    "@type": "Person",
+    "name": "Andrea Volkamer"
+  }, {
+    "@type": "Person",
+    "name": "John D. Chodera"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://gph82.github.io/papers/article_28/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Guillermo Pérez-Hernández",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://gph82.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" integrity="sha384-wcIxkf4k558AjM3Yz3BBFQUbk/zgIYC2R0QpeeYb+TwlBVMrlgLqwRjRtGZiK7ww" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js" integrity="sha384-hIoBPJpTUs74ddyc4bFZSM1TVlQDA60VBbJS0oA934VSz82sBx1X7kSx2ATBDIyd" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"
+  onload="renderMathInElement(document.body);"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false},
+            {left: "\\begin{equation}", right: "\\end{equation}", display: true},
+            {left: "\\begin{equation*}", right: "\\end{equation*}", display: true},
+            {left: "\\begin{align}", right: "\\end{align}", display: true},
+            {left: "\\begin{align*}", right: "\\end{align*}", display: true},
+            {left: "\\begin{alignat}", right: "\\end{alignat}", display: true},
+            {left: "\\begin{gather}", right: "\\end{gather}", display: true},
+            {left: "\\begin{CD}", right: "\\end{CD}", display: true},
+          ],
+          throwOnError : false
+        });
+    });
+</script>
+ 
+
+
+</head>
+
+<body class="" id="top">
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://gph82.github.io/" accesskey="h" title=" "> </a>
+            <div class="logo-switches">
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://gph82.github.io/" title="home">
+                    <span>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" style="vertical-align: text-bottom;" viewBox="0 0 576 512" fill="currentColor">
+                            <path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32v160c0 22.1-17.9 40-40 40h-48V352c0-17.7-14.3-32-32-32H184c-17.7 0-32 14.3-32 32v135.6H104c-22.1 0-40-17.9-40-40V287.6H32c-18 0-32-14.1-32-32.1 0-9 3-17 10-24L266.5 7c13.3-13.3 34.9-13.3 48.2 0L565.8 231.5c8 7 10 15 10 24z"/>
+                          </svg>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://gph82.github.io/papers/" title="Publications">
+                    <span>Publications
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://gph82.github.io/software/" title="Software">
+                    <span>Software
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://gph82.github.io/affiliation/" title="Affiliation">
+                    <span>Affiliation
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://gph82.github.io/outreach/" title="Outreach">
+                    <span>Outreach
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://gph82.github.io/scipol/" title="CERFA &amp; RAICEX">
+                    <span>CERFA &amp; RAICEX
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://gph82.github.io/CV.pdf" title="CV">
+                    <span>CV
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+    <main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      The Journey of Data: Lessons Learned in Modeling Kinase Affinity, Selectivity, and Resistance [Article v1.0]
+    </h1>
+    <div class="post-meta"><span title='2025-11-19 00:00:00 +0000 UTC'>November 2025</span>&nbsp;&middot;&nbsp;Raquel López-Ríos de Castro,&thinsp;Jaime Rodríguez-Guerra,&thinsp;David Schaller,&thinsp;Talia B. Kimber,&thinsp;Corey Taylor,&thinsp;Jessica B. White,&thinsp;Michael Backenköhler,&thinsp;Joschka Groß,&thinsp;Alexander M. Payne,&thinsp;Benjamin Kaminow,&thinsp;Ivan Pulido,&thinsp;Sukrit Singh,&thinsp;Paula Linh Kramer,&thinsp;<b>Guillermo Pérez-Hernández</b>,&thinsp;Andrea Volkamer,&thinsp;John D. Chodera&nbsp;&middot;&nbsp;<a href="https://doi.org/10.33011/livecoms.6.1.3875" rel="noopener noreferrer" target="_blank">Living Journal of Computational Molecular Science</a>
+
+</div>
+  </header> 
+  <div class="post-content"><h5 id="figure-4-kinoml-workflow-from-data-acquisition-to-featurization">Figure 4: KinoML workflow from data acquisition to featurization<a hidden class="anchor" aria-hidden="true" href="#figure-4-kinoml-workflow-from-data-acquisition-to-featurization">#</a></h5>
+<h2><img loading="lazy" src="/papers/article_28/paper1.png"></h2>
+<h5 id="doi">DOI<a hidden class="anchor" aria-hidden="true" href="#doi">#</a></h5>
+<h2 id="1033011livecoms613875"><a href="https://doi.org/10.33011/livecoms.6.1.3875" target="_blank">10.33011/livecoms.6.1.3875</a><a hidden class="anchor" aria-hidden="true" href="#1033011livecoms613875">#</a></h2>
+<h5 id="abstract">Abstract<a hidden class="anchor" aria-hidden="true" href="#abstract">#</a></h5>
+<p>Recent advances in machine learning (ML) are reshaping drug discovery. Structure-based ML methods use physically-inspired models to predict binding aﬃnities from protein:ligand complexes. These methods promise to enable the integration of data for many related targets, which addresses issues related to data scarcity for single targets and could enable generalizable predictions for a broad range of targets, including mutations. In this work, we report our experiences in building KinoML, a novel framework for ML in target-based small molecule drug discovery with an emphasis on structure-enabled methods. KinoML focuses currently on kinases as the relative structural conservation of this protein superfamily, particularly in the kinase domain, means it is possible to leverage data from the entire superfamily to make structure-informed predictions about binding affinities, selectivities, and drug resistance. Some key lessons learned in building KinoML include the importance of reproducible data collection and deposition, the harmonization of molecular data and featurization, and the selection of the right data format to ensure reusability and reproducibility of ML models. As a result, KinoML allows users to easily achieve three tasks: accessing and curating molecular data; featurizing this data with representations suitable for ML applications; and running reproducible ML experiments that require access to ligand, protein, and assay information to predict ligand affinity. Despite KinoML focusing on kinases, this framework can be applied to other proteins. The lessons reported here can help guide the development of platforms for structure-enabled ML in other areas of drug discovery.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2026 Guillermo Pérez-Hernández</span> ·     
+    <span>
+    Powered by 
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">hugo</a>, <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">papermod</a>, &amp;
+        <a href="https://github.com/pmichaillat/hugo-website/" rel="noopener" target="_blank">hugo-website</a>
+    </span> · 
+    <a href='/impressum/' target="_blank" rel="noopener">Impressum</a>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+</html>

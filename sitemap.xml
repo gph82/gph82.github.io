@@ -2,11 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://gph82.github.io/papers/</loc>
-    <lastmod>2025-04-21T00:00:00+00:00</lastmod>
+    <loc>https://gph82.github.io/papers/article_29/</loc>
+    <lastmod>2025-11-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://gph82.github.io/</loc>
-    <lastmod>2025-04-21T00:00:00+00:00</lastmod>
+    <lastmod>2025-11-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gph82.github.io/papers/</loc>
+    <lastmod>2025-11-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gph82.github.io/papers/article_28/</loc>
+    <lastmod>2025-11-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gph82.github.io/tags/event/</loc>
+    <lastmod>2025-11-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gph82.github.io/outreach/</loc>
+    <lastmod>2025-11-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gph82.github.io/tags/public-talk/</loc>
+    <lastmod>2025-11-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gph82.github.io/outreach/2025_supercomputing/</loc>
+    <lastmod>2025-11-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gph82.github.io/tags/</loc>
+    <lastmod>2025-11-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://gph82.github.io/papers/article_27/</loc>
     <lastmod>2025-04-21T00:00:00+00:00</lastmod>
@@ -20,18 +41,6 @@
     <loc>https://gph82.github.io/outreach/2025_obeliscos/</loc>
     <lastmod>2025-02-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://gph82.github.io/tags/event/</loc>
-    <lastmod>2025-02-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://gph82.github.io/outreach/</loc>
-    <lastmod>2025-02-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://gph82.github.io/tags/public-talk/</loc>
-    <lastmod>2025-02-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://gph82.github.io/tags/</loc>
-    <lastmod>2025-02-13T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://gph82.github.io/papers/article_26/</loc>
     <lastmod>2025-01-02T00:00:00+00:00</lastmod>
   </url><url>
@@ -43,6 +52,9 @@
   </url><url>
     <loc>https://gph82.github.io/papers/article_23/</loc>
     <lastmod>2024-05-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gph82.github.io/outreach/2023_cerfa_10_years/</loc>
+    <lastmod>2023-09-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://gph82.github.io/papers/article_21/</loc>
     <lastmod>2023-04-10T00:00:00+00:00</lastmod>
@@ -59,8 +71,11 @@
     <loc>https://gph82.github.io/outreach/2021_stressed_and_away/</loc>
     <lastmod>2021-10-30T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://gph82.github.io/outreach/2021_scientificdialogue_cirac/</loc>
+    <lastmod>2021-06-10T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://gph82.github.io/papers/article_17/</loc>
-    <lastmod>2021-03-01T00:00:00+00:00</lastmod>
+    <lastmod>2021-03-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://gph82.github.io/outreach/2019_science4kids/</loc>
     <lastmod>2019-12-13T00:00:00+00:00</lastmod>
@@ -141,10 +156,12 @@
   </url><url>
     <loc>https://gph82.github.io/affiliation/</loc>
   </url><url>
-    <loc>https://gph82.github.io/archive/</loc>
-  </url><url>
-    <loc>https://gph82.github.io/cv/</loc>
+    <loc>https://gph82.github.io/impressum/</loc>
   </url><url>
     <loc>https://gph82.github.io/scipol/</loc>
+  </url><url>
+    <loc>https://gph82.github.io/videos/</loc>
+  </url><url>
+    <loc>https://gph82.github.io/_wordcloud/</loc>
   </url>
 </urlset>

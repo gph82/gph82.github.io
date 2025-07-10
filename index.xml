@@ -4,16 +4,37 @@
     <title>Guillermo Pérez-Hernández</title>
     <link>https://gph82.github.io/</link>
     <description>Recent content on Guillermo Pérez-Hernández</description>
-    <generator>Hugo -- 0.148.0</generator>
+    <generator>Hugo -- 0.152.2</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 21 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 21 Nov 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://gph82.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Evaluation Beyond Goodness of Fit: Biophysical Alignment of AI Models for Kinase-Centric Drug Discovery</title>
+      <link>https://gph82.github.io/papers/article_29/</link>
+      <pubDate>Fri, 21 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://gph82.github.io/papers/article_29/</guid>
+      <description>Accurately modeling interactions between small molecules and proteins using machine learning (ML) remains a central challenge in modern drug discovery. In particular, achieving and reliably assessing generalization in ML-based mod- els for binding affinity prediction has proven difficult. Focusing on the protein kinase domain, we investigate both the predictive performance and biophysical plausibility of graph neural networks (GNNs) trained to predict binding affinity, with and without access to docked protein–ligand complexes. To this end, we introduce a model-agnostic explainable AI framework that interprets model pre- dictions by attributing them to specific residues within the ATP-binding pocket of kinases. On the basis of discrete interaction fingerprints (IFPs), we employ robust statistical methods and feature selection to derive reference interaction profiles that serve as ground-truth explanations. Our analysis identifies 131 dis- tinct residues across 29 unique kinases that play key roles in linking IFP and binding affinity data. This enables a complementary benchmark, spanning nearly 10,000 docked complexes, to quantitatively assess model quality not only in terms of predictive accuracy but also biophysical alignment. The benchmark quantifies to what extent the model’s predictive mechanism aligns with meaningful bio- physical mechanisms—specifically, whether it recognizes protein regions actively involved in ligand binding. In a pilot study, we find that models incorporating 3D structural features exhibit moderate biophysical alignment, whereas baseline models without 3D information show no significant alignment, underscoring the structural nature of molecular binding, and importance thereof for training GNN models.</description>
+    </item>
+    <item>
+      <title>The Journey of Data: Lessons Learned in Modeling Kinase Affinity, Selectivity, and Resistance [Article v1.0]</title>
+      <link>https://gph82.github.io/papers/article_28/</link>
+      <pubDate>Wed, 19 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://gph82.github.io/papers/article_28/</guid>
+      <description>Recent advances in machine learning (ML) are reshaping drug discovery. Structure-based ML methods use physically-inspired models to predict binding aﬃnities from protein:ligand complexes. These methods promise to enable the integration of data for many related targets, which addresses issues related to data scarcity for single targets and could enable generalizable predictions for a broad range of targets, including mutations. In this work, we report our experiences in building KinoML, a novel framework for ML in target-based small molecule drug discovery with an emphasis on structure-enabled methods. KinoML focuses currently on kinases as the relative structural conservation of this protein superfamily, particularly in the kinase domain, means it is possible to leverage data from the entire superfamily to make structure-informed predictions about binding affinities, selectivities, and drug resistance. Some key lessons learned in building KinoML include the importance of reproducible data collection and deposition, the harmonization of molecular data and featurization, and the selection of the right data format to ensure reusability and reproducibility of ML models. As a result, KinoML allows users to easily achieve three tasks: accessing and curating molecular data; featurizing this data with representations suitable for ML applications; and running reproducible ML experiments that require access to ligand, protein, and assay information to predict ligand affinity. Despite KinoML focusing on kinases, this framework can be applied to other proteins. The lessons reported here can help guide the development of platforms for structure-enabled ML in other areas of drug discovery.</description>
+    </item>
+    <item>
+      <title>Supercomputing in Europa</title>
+      <link>https://gph82.github.io/outreach/2025_supercomputing/</link>
+      <pubDate>Thu, 06 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://gph82.github.io/outreach/2025_supercomputing/</guid>
+      <description>Supercomputing in Europa - A moderated talk at the Instituto Cervantes Berlin</description>
+    </item>
     <item>
       <title>mdciao: Accessible Analysis and Visualization of Molecular Dynamics Simulation Data</title>
       <link>https://gph82.github.io/papers/article_27/</link>
       <pubDate>Mon, 21 Apr 2025 00:00:00 +0000</pubDate>
       <guid>https://gph82.github.io/papers/article_27/</guid>
-      <description>We present mdciao, an open-source command line tool and Python Application-Programming-Interface (API) for easy, one-shot analysis and representation of molecular dynamics (MD) simulation data. Building upon the widely used concept of residue-residue contact-frequencies, mdciao offers a wide spectrum of further analysis and representations, enriched with available domain specific annotations. The user-friendly interface offers pre-packaged solutions for non-expert users, while keeping customizability for expert ones. Emphasis has been put into automatically producing annotated, production-ready figures and tables. Furthermore, seamless on-the-fly query and inclusion of domain-specific generic residue numbering for GPCRs, GAIN-domains, G-proteins, and kinases is made possible through online lookups. This allows for easy selection and comparison across different systems, regardless of sequence identity, target residues or domains. Finally, the fully documented Python API allows users to include the basic or advanced mdciao functions in their analysis workflows, and provides numerous examples and Jupyter Notebook Tutorials. The source code is published under the GNU Lesser General Public License v3.0 or later and hosted on https://github.com/gph82/mdciao, and the documentation, including guides and examples, can be found at https://www.mdciao.org</description>
+      <description> We present mdciao, an open-source command line tool and Python Application-Programming-Interface (API) for easy, one-shot analysis and representation of molecular dynamics (MD) simulation data. Building upon the widely used concept of residue-residue contact-frequencies, mdciao offers a wide spectrum of further analysis and representations, enriched with available domain specific annotations. The user-friendly interface offers pre-packaged solutions for non-expert users, while keeping customizability for expert ones. Emphasis has been put into automatically producing annotated, production-ready figures and tables. Furthermore, seamless on-the-fly query and inclusion of domain-specific generic residue numbering for GPCRs, GAIN-domains, G-proteins, and kinases is made possible through online lookups. This allows for easy selection and comparison across different systems, regardless of sequence identity, target residues or domains. Finally, the fully documented Python API allows users to include the basic or advanced mdciao functions in their analysis workflows, and provides numerous examples and Jupyter Notebook Tutorials. The source code is published under the GNU Lesser General Public License v3.0 or later and hosted on https://github.com/gph82/mdciao , and the documentation, including guides and examples, can be found at https://www.mdciao.org </description>
     </item>
     <item>
       <title>mdciao: Accessible Analysis and Visualization of Molecular Dynamics Simulation Data</title>
@@ -27,17 +48,17 @@
       <link>https://gph82.github.io/outreach/2025_obeliscos/</link>
       <pubDate>Thu, 13 Feb 2025 00:00:00 +0000</pubDate>
       <guid>https://gph82.github.io/outreach/2025_obeliscos/</guid>
-      <description>&amp;lsquo;Obelisks&amp;rsquo;: A new lifeform - A moderated talk at the Instituto Cervantes Berlin.</description>
+      <description>&amp;lsquo;Obelisks&amp;rsquo;: A new lifeform - A moderated talk at the Instituto Cervantes Berlin</description>
     </item>
     <item>
       <title>Generic residue numbering of the GAIN domain of adhesion GPCRs</title>
       <link>https://gph82.github.io/papers/article_26/</link>
       <pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate>
       <guid>https://gph82.github.io/papers/article_26/</guid>
-      <description>The GPCR autoproteolysis inducing (GAIN) domain is an ancient protein fold ubiquitous in adhesion G protein-coupled receptors (aGPCR). It contains a tethered agonist necessary and sufficient for receptor activation. The GAIN domain is a hotspot for pathological mutations. However, the low primary sequence conservation of GAIN domains has thus far hindered the knowledge transfer across different GAIN domains in human receptors as well as species orthologs. Here, we present a scheme for generic residue numbering of GAIN domains, based on structural alignments of over 14,000 modeled GAIN domain structures. This scheme is implemented in the GPCR database (GPCRdb) and elucidates the domain topology across different aGPCRs and their homologs in a large panel of species. We identify conservation hotspots and statistically cancer-enriched positions in human aGPCRs and show the transferability of positional and structural information between GAIN domain homologs. The GAIN-GRN scheme provides a robust strategy to allocate structural homologies at the primary and secondary levels also to GAIN domains of polycystic kidney disease 1/PKD1-like proteins, which now renders positions in both GAIN domain types comparable to one another. In summary, our work enables researchers to generate hypothesis and rationalize experiments related to GAIN domain function and pathology.</description>
+      <description> The GPCR autoproteolysis inducing (GAIN) domain is an ancient protein fold ubiquitous in adhesion G protein-coupled receptors (aGPCR). It contains a tethered agonist necessary and sufficient for receptor activation. The GAIN domain is a hotspot for pathological mutations. However, the low primary sequence conservation of GAIN domains has thus far hindered the knowledge transfer across different GAIN domains in human receptors as well as species orthologs. Here, we present a scheme for generic residue numbering of GAIN domains, based on structural alignments of over 14,000 modeled GAIN domain structures. This scheme is implemented in the GPCR database (GPCRdb) and elucidates the domain topology across different aGPCRs and their homologs in a large panel of species. We identify conservation hotspots and statistically cancer-enriched positions in human aGPCRs and show the transferability of positional and structural information between GAIN domain homologs. The GAIN-GRN scheme provides a robust strategy to allocate structural homologies at the primary and secondary levels also to GAIN domains of polycystic kidney disease 1/PKD1-like proteins, which now renders positions in both GAIN domain types comparable to one another. In summary, our work enables researchers to generate hypothesis and rationalize experiments related to GAIN domain function and pathology.</description>
     </item>
     <item>
-      <title>Berlin Science Week: Digitising Dinosaurs: Ethics and Technology in the 21st Century</title>
+      <title>Berlin Science Week: Digitising Dinosaurs - Ethics and Technology in the 21st Century</title>
       <link>https://gph82.github.io/outreach/2024_berlin_science_week/</link>
       <pubDate>Thu, 07 Nov 2024 00:00:00 +0000</pubDate>
       <guid>https://gph82.github.io/outreach/2024_berlin_science_week/</guid>
@@ -58,11 +79,18 @@
       <description>G-protein-coupled receptors (GPCRs) activate heterotrimeric G proteins by stimulating guanine nucleotide exchange in the Gα subunit1. To visualize this mechanism, we developed a time-resolved cryo-EM approach that examines the progression of ensembles of pre-steady-state intermediates of a GPCR–G-protein complex. By monitoring the transitions of the stimulatory Gs protein in complex with the β2-adrenergic receptor at short sequential time points after GTP addition, we identified the conformational trajectory underlying G-protein activation and functional dissociation from the receptor. Twenty structures generated from sequential overlapping particle subsets along this trajectory, compared to control structures, provide a high-resolution description of the order of main events driving G-protein activation in response to GTP binding. Structural changes propagate from the nucleotide-binding pocket and extend through the GTPase domain, enacting alterations to Gα switch regions and the α5 helix that weaken the G-protein–receptor interface. Molecular dynamics simulations with late structures in the cryo-EM trajectory support that enhanced ordering of GTP on closure of the α-helical domain against the nucleotide-bound Ras-homology domain correlates with α5 helix destabilization and eventual dissociation of the G protein from the GPCR. These findings also highlight the potential of time-resolved cryo-EM as a tool for mechanistic dissection of GPCR signalling events.</description>
     </item>
     <item>
+      <title>Interviewing Belén Garijo at CERFA’s 10th Anniversary</title>
+      <link>https://gph82.github.io/outreach/2023_cerfa_10_years/</link>
+      <pubDate>Fri, 22 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>https://gph82.github.io/outreach/2023_cerfa_10_years/</guid>
+      <description>A Conversation with Belén Garijo, CEO of Merck, in the Spanish Embassy in Berlin</description>
+    </item>
+    <item>
       <title>Function and dynamics of the intrinsically disordered carboxyl terminus of β2 adrenergic receptor</title>
       <link>https://gph82.github.io/papers/article_21/</link>
       <pubDate>Mon, 10 Apr 2023 00:00:00 +0000</pubDate>
       <guid>https://gph82.github.io/papers/article_21/</guid>
-      <description>dvances in structural biology have provided important mechanistic insights into signaling by the transmembrane core of G-protein coupled receptors (GPCRs); however, much less is known about intrinsically disordered regions such as the carboxyl terminus (CT), which is highly flexible and not visible in GPCR structures. The β2adrenergic receptor’s (β2AR) 71 amino acid CT is a substrate for GPCR kinases and binds β-arrestins to regulate signaling. Here we show that the β2AR CT directly inhibits basal and agonist-stimulated signaling in cell lines lacking β-arrestins. Combining single-molecule fluorescence resonance energy transfer (FRET), NMR spectroscopy, and molecular dynamics simulations, we reveal that the negatively charged β2AR-CT serves as an autoinhibitory factor via interacting with the positively charged cytoplasmic surface of the receptor to limit access to G-proteins. The stability of this interaction is influenced by agonists and allosteric modulators, emphasizing that the CT plays important role in allosterically regulating GPCR activation.</description>
+      <description>Advances in structural biology have provided important mechanistic insights into signaling by the transmembrane core of G-protein coupled receptors (GPCRs); however, much less is known about intrinsically disordered regions such as the carboxyl terminus (CT), which is highly flexible and not visible in GPCR structures. The β2adrenergic receptor’s (β2AR) 71 amino acid CT is a substrate for GPCR kinases and binds β-arrestins to regulate signaling. Here we show that the β2AR CT directly inhibits basal and agonist-stimulated signaling in cell lines lacking β-arrestins. Combining single-molecule fluorescence resonance energy transfer (FRET), NMR spectroscopy, and molecular dynamics simulations, we reveal that the negatively charged β2AR-CT serves as an autoinhibitory factor via interacting with the positively charged cytoplasmic surface of the receptor to limit access to G-proteins. The stability of this interaction is influenced by agonists and allosteric modulators, emphasizing that the CT plays important role in allosterically regulating GPCR activation.</description>
     </item>
     <item>
       <title>MDsrv: visual sharing and analysis of molecular dynamics simulations</title>
@@ -79,11 +107,11 @@
       <description>A self-organized group of PhD invited me to talk about &amp;lsquo;Growing Up in Science&amp;rsquo;</description>
     </item>
     <item>
-      <title>Scientific Dialogue with Pedro Duque</title>
+      <title>Moderating a Scientific Dialogue with Pedro Duque</title>
       <link>https://gph82.github.io/outreach/2021_scientificdialogue_duque/</link>
       <pubDate>Wed, 01 Dec 2021 00:00:00 +0000</pubDate>
       <guid>https://gph82.github.io/outreach/2021_scientificdialogue_duque/</guid>
-      <description>Virtual Scientific Dialogue with Astronaut (and former Minister of Science) Pedro Duque</description>
+      <description>Virtual Scientific Dialogue with Astronaut and former Minister of Science Pedro Duque</description>
     </item>
     <item>
       <title>Stressed and Away from Home: Mental Health in International Researchers</title>
@@ -93,9 +121,16 @@
       <description>Stressed and Away from Home: Mental Health in International Researchers</description>
     </item>
     <item>
+      <title>Moderating a Scientific Dialogue with Juan Ignacio Cirac</title>
+      <link>https://gph82.github.io/outreach/2021_scientificdialogue_cirac/</link>
+      <pubDate>Thu, 10 Jun 2021 00:00:00 +0000</pubDate>
+      <guid>https://gph82.github.io/outreach/2021_scientificdialogue_cirac/</guid>
+      <description>Virtual Scientific Dialogue with Prof. Dr. Juan Ignacio Cirac, Director at the Max Planck Institute of Quantum Optics</description>
+    </item>
+    <item>
       <title>Tethered agonist exposure in intact adhesion/class B2 GPCRs through intrinsic structural flexibility of the GAIN domain</title>
       <link>https://gph82.github.io/papers/article_17/</link>
-      <pubDate>Mon, 01 Mar 2021 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 04 Mar 2021 00:00:00 +0000</pubDate>
       <guid>https://gph82.github.io/papers/article_17/</guid>
       <description>Adhesion G protein-coupled receptors (aGPCRs)/family B2 GPCRs execute critical tasks during development and the operation of organs, and their genetic lesions are associated with human disorders, including cancers. Exceptional structural aGPCR features are the presence of a tethered agonist (TA) concealed within a GPCR autoproteolysis-inducing (GAIN) domain and their non-covalent heteromeric two-subunit layout. How the TA is poised for activation while maintaining this delicate receptor architecture is central to conflicting signaling paradigms that either involve or exclude aGPCR heterodimer separation. We investigated this matter in five mammalian aGPCR homologs (ADGRB3, ADGRE2, ADGRE5, ADGRG1, and ADGRL1) and demonstrate that intact aGPCR heterodimers exist at the cell surface, that the core TA region becomes unmasked in the cleaved GAIN domain, and that intra-GAIN domain movements regulate the level of tethered agonist exposure, thereby likely controlling aGPCR activity. Collectively, these findings delineate a unifying mechanism for TA-dependent signaling of intact aGPCRs.</description>
     </item>
@@ -195,7 +230,7 @@
       <link>https://gph82.github.io/papers/article_11/</link>
       <pubDate>Sun, 07 Jul 2013 00:00:00 +0000</pubDate>
       <guid>https://gph82.github.io/papers/article_11/</guid>
-      <description> goal in the kinetic characterization of a macromolecular system is the description of its slow relaxation processes via (i) identification of the structural changes involved in these processes and (ii) estimation of the rates or timescales at which these slow processes occur. Most of the approaches to this task, including Markov models, master-equation models, and kinetic network models, start by discretizing the high-dimensional state space and then characterize relaxation processes in terms of the eigenvectors and eigenvalues of a discrete transition matrix. The practical success of such an approach depends very much on the ability to finely discretize the slow order parameters. How can this task be achieved in a high-dimensional configuration space without relying on subjective guesses of the slow order parameters? In this paper, we use the variational principle of conformation dynamics to derive an optimal way of identifying the “slow subspace” of a large set of prior order parameters – either generic internal coordinates or a user-defined set of parameters. Using a variational formulation of conformational dynamics, it is shown that an existing method—the time-lagged independent component analysis—provides the optional solution to this problem. In addition, optimal indicators—order parameters indicating the progress of the slow transitions and thus may serve as reaction coordinates—are readily identified. We demonstrate that the slow subspace is well suited to construct accurate kinetic models of two sets of molecular dynamics simulations, the 6-residue fluorescent peptide MR121-GSGSW and the 30-residue intrinsically disordered peptide kinase inducible domain (KID). The identified optimal indicators reveal the structural changes associated with the slow processes of the molecular system under analysis.</description>
+      <description>A goal in the kinetic characterization of a macromolecular system is the description of its slow relaxation processes via (i) identification of the structural changes involved in these processes and (ii) estimation of the rates or timescales at which these slow processes occur. Most of the approaches to this task, including Markov models, master-equation models, and kinetic network models, start by discretizing the high-dimensional state space and then characterize relaxation processes in terms of the eigenvectors and eigenvalues of a discrete transition matrix. The practical success of such an approach depends very much on the ability to finely discretize the slow order parameters. How can this task be achieved in a high-dimensional configuration space without relying on subjective guesses of the slow order parameters? In this paper, we use the variational principle of conformation dynamics to derive an optimal way of identifying the “slow subspace” of a large set of prior order parameters – either generic internal coordinates or a user-defined set of parameters. Using a variational formulation of conformational dynamics, it is shown that an existing method—the time-lagged independent component analysis—provides the optional solution to this problem. In addition, optimal indicators—order parameters indicating the progress of the slow transitions and thus may serve as reaction coordinates—are readily identified. We demonstrate that the slow subspace is well suited to construct accurate kinetic models of two sets of molecular dynamics simulations, the 6-residue fluorescent peptide MR121-GSGSW and the 30-residue intrinsically disordered peptide kinase inducible domain (KID). The identified optimal indicators reveal the structural changes associated with the slow processes of the molecular system under analysis.</description>
     </item>
     <item>
       <title>Anisotropy of the water–carbon interaction: molecular simulations of water in low-diameter carbon nanotubes</title>
@@ -287,16 +322,6 @@ I study the conformational dynamics of cell-signaling proteins—primarily GPCRs
 &lt;h2 id=&#34;-variant-b--abstract-style-tone&#34;&gt;🔹 Variant B – “Abstract-style” Tone&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Research Focus:&lt;/strong&gt;&lt;br&gt;
 Molecular simulations and statistical modeling of cell-signaling proteins, with a focus on GPCRs and kinases. Key methods include enhanced sampling, Markov State Models (MSMs), and dimensionality reduction. Author of &lt;em&gt;mdciao&lt;/em&gt; and contributor to &lt;em&gt;PyEMMA&lt;/em&gt;.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Curriculum Vitae</title>
-      <link>https://gph82.github.io/cv/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://gph82.github.io/cv/</guid>
-      <description>&lt;h1 id=&#34;dr-guillermo-pérez-hernández&#34;&gt;Dr. Guillermo Pérez-Hernández&lt;/h1&gt;
-&lt;p&gt;Senior Research Associate - Einstein BIH PostDoc&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Current Institution&lt;/strong&gt;: Charité Universitätsmedizin Berlin, Institute for Medical Physics and Biophysics &lt;!-- - Institute for Physiology  --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Research Focus:&lt;/strong&gt; Computational biophysics of cell-signaling proteins, with emphasis on GPCR–G-protein complexes and kinases. Special interest in conformational dynamics and its modulation via ligands, pH, or mutations. Simulation-driven approaches (MD) combined with Markov modeling and dimensionality reduction. Developer of open-source tools for molecular analysis (e.g., mdciao) and contributor to established packages (PyEMMA).&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
