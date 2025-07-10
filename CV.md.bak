@@ -1,0 +1,181 @@
+---
+title: "Curriculum Vitae"
+url: "/cv/"
+layout: single
+author: " "
+---
+
+# Dr. Guillermo Pérez-Hernández
+Senior Research Associate - Einstein BIH PostDoc  
+
+**Current Institution**: Charité Universitätsmedizin Berlin, Institute for Medical Physics and Biophysics <!-- - Institute for Physiology  -->
+
+**Research Focus:** Computational biophysics of cell-signaling proteins, with emphasis on GPCR–G-protein complexes and kinases. Special interest in conformational dynamics and its modulation via ligands, pH, or mutations. Simulation-driven approaches (MD) combined with Markov modeling and dimensionality reduction. Developer of open-source tools for molecular analysis (e.g., mdciao) and contributor to established packages (PyEMMA).
+
+📧 guille.perez.hernandez@gmail.com  
+🌐 [Your Hugo site URL](https://github.com/gph82)
+🔗 [GitHub](https://github.com/gph82) • [Google Scholar](https://scholar.google.de/citations?user=31eqCwEAAAAJ&hl=en) • [ORCID](http://orcid.org/0000-0002-9287-8704) • [LinkedIn](https://www.linkedin.com/in/guillermoperezhernandez/)
+
+---
+
+### Scientific Experience
+
+**07.2023 – present**  
+**Conformational Dynamics of Kinases**  
+*Charité Universitätsmedizin Berlin (guest scientist at [Universität des Saarlandes](https://volkamerlab.org/))  
+Prof. A. Volkamer, Einstein BIH Visiting Fellow John Chodera, PhD*  
+- Conformational dynamics of inhibitor-bound kinases under mutagenesis conditions.  
+- Pipeline for large-scale conformational analysis of the structural kinome.  
+- Integration of kinase-specific generic residue numbering into [mdciao](https://mdciao.org)*  
+- pH-dependent conformational switching
+
+
+**07.2018 – present**  
+**Molecular Simulation and Automated Analysis of GPCRs and GPCR–G protein Complexes**  
+*Charité Universitätsmedizin Berlin (guest scientist at [Universität Leipzig](https://proteinformatics.uni-leipzig.de/group/team.php))  
+Prof. P. W. Hildebrand, Dr. Patrick Scheerer, Einstein BIH Visiting Fellow Prof. Brian Kobilka*  
+- Implementation of adaptive sampling protocols.  
+- Group-wide support for simulation methodologies and infrastructure.  
+- Automated MD analysis workflows and custom Python modules.  
+- Development and release of open-source tool [mdciao](https://mdciao.org).
+
+**01.2012 – 06.2018**  
+**Markov Modeling, Adaptive Sampling, Software Development**  
+*Freie Universität Berlin — Prof. F. Noé*  
+- Molecular simulation of rhodopsin activation and conformational dynamics.  
+- Development of dimensionality reduction techniques (e.g., TICA).  
+- Refactoring of [PyEMMA's](http://emma-project.org/latest) API, especially the *coordinates* submodule.  
+- Co-authorship and delivery of multiple PyEMMA tutorials to the community.
+
+**12.2010 – 12.2011**  
+**Molecular Simulation of Water in Carbon Nanotubes**  
+*Freie Universität Berlin — PD Dr. B. Schmidt*  
+- Confinement effects and transport phenomena of water inside carbon nanotubes.
+
+**09.2005 – 11.2010**  
+**Quantum Chemistry, Spectroscopy, and Laser Control of Molecular Rotors**  
+*Friedrich-Schiller-Universität Jena — Prof. L. González*  
+*Freie Universität Berlin — Prof. J. Manz, PD Dr. L. González*  
+- Ground- and excited-state conformational dynamics and spectroscopy of light-triggered molecular rotors.  
+- Quantum control approaches for laser-driven conformational transitions.
+
+
+---
+
+### Education
+
+**2010** – Dr. rer. nat. in Chemistry (summa cum laude)  
+Friedrich-Schiller-Universität Jena, Germany  
+Dissertation: *Light-triggered unidirectional molecular rotors: theoretical investigations on conformational dynamics and laser control*
+
+**2005** – Licenciado en Ciencias Químicas (equivalent to MSc)  
+Universidad de La Laguna, Spain  
+Master’s Thesis: *Potential energy surfaces and vibrational eigenfunctions in FHF⁻: a three-dimensional study*
+
+---
+
+### Scientific Computing
+**Software Contributions:** Developer of [mdciao](https://mdciao.org) and [molPX](https://molpx.readthedocs.io/en/latest); contributor to [PyEMMA](http://emma-project.org/latest) and [mdsrv2](https://proteininformatics.informatik.uni-leipzig.de)  
+**Reproducibility:** CI-integration, version control, python release cycle (packaging and distribution)  
+<!--
+**Languages & Scripting:** Python (NumPy, SciPy, Jupyter), FORTRAN90, MATLAB, Bash  
+**Simulation & Modeling:** GROMACS, OpenMM, cp2k, Gaussian, MOLCAS, MOLPRO, MOPAC
+**Workflow & Tools:** VMD, LaTeX, Git, Linux-based HPC environments, Docker/Singularity  
+-->
+
+// Optional footnote or sidebar can explain acronyms like MSM, QC, MD, if you think the audience needs it.
+
+---
+
+### Teaching Experience
+
+// Brief intro optional if you want context, e.g.:
+// Over the years, I have taught a range of courses from theoretical chemistry to computational modeling, including the design and delivery of advanced simulation curricula.
+
+**2019 – 2022**  
+**Molecular Modelling** 
+*Universität Leipzig* 
+- Companion practical course (four semesters)
+- Enhanced sampling of MDs and MSMs
+- Analysis of MD simulation
+- Intro to software best practices
+
+**2024**  
+**[CADD Seminar: Data Driven Drug Design - Methods and Applications](https://volkamerlab.org/education/cadd-sb)**  
+*Universität des Saarlandes*
+- Mentored students on an 8 week project developing Talktorial for the TeachOpenCADD package
+
+
+**2014 – 2016**  
+**Advanced Molecular Simulation**  
+*Freie Universität Berlin*  
+- Lecture and exercises over two semesters  
+- Theory and practice of MD, enhanced sampling, and MSMs
+
+**2012 – 2013**  
+**Simulation and Analysis of Stochastic Processes**  
+*Freie Universität Berlin*  
+- Led weekly exercises complementing a theoretical course  
+- Focused on Markov models and statistical mechanics
+
+**2007 – 2010**  
+**Physical and Quantum Chemistry Exercises**  
+*Friedrich-Schiller-Universität Jena*  
+- Multiple semesters of hands-on student instruction  
+- Focus included wavefunctions, operators, and computational applications
+
+**2006 – 2007**  
+**FORTRAN90 Programming & Physical Chemistry**  
+*Freie Universität Berlin*  
+- Supervised computer exercises in FORTRAN  
+- Taught basic programming logic and numerical methods for chemists
+
+---
+
+### Supervised Master’s Theses
+
+// This section shows mentoring experience and applied supervision.
+
+**2012** – *Molecular Simulation and the Variational Principle*, F. Nüske (FUB)  
+**2011** – *Monte Carlo Simulation of Water Complexes*, C. von Eiff (FSU)  
+**2009** – *Quantum Control of Molecular Rotors*, S. Kupfer (FSU)  
+**2009** – *Quantum Control of Molecular Rotors*, M. Assmann (FSU)
+
+---
+
+### Workshops and Software Tutorials
+
+// This section highlights your community contribution and technical teaching.
+
+**2018** – *Computer Tutorial in Markov Modeling (PyEMMA)*  
+Freie Universität Berlin  
+- Hands-on sessions using PyEMMA for conformational dynamics and kinetics
+
+**2016** – *Free Energy Calculation and Molecular Kinetics Workshop*  
+King’s College London  
+- Presented on adaptive sampling and MSM-based analysis
+
+**2016** – *Markov Models and Free Energies from MD*  
+Freie Universität Berlin  
+- Organizer and lead tutor; developed tutorial workflows
+
+**2015** – *Advanced Sampling and Long Timescale MD*  
+Forschungszentrum Jülich  
+- Invited session on practical use of PyEMMA in enhanced sampling
+
+**2015** – *Free Energy and MSM Workshop*  
+King’s College London  
+- Co-led teaching sessions and participant tutorials
+
+---
+
+### Conference Organization
+
+// Optional but shows leadership and embeddedness in the community.
+
+**2015** – *Molecular and Chemical Kinetics 2015*, Berlin  
+**2013** – *Molecular Kinetics 2013*, Berlin  
+- Co-organizer, responsible for technical program and speaker coordination
+
+---
+
