@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Anisotropy of the water–carbon interaction: molecular simulations of water in low-diameter carbon nanotubes | Guillermo Pérez-Hernández</title>
+<meta name="keywords" content="">
+<meta name="description" content="Effective Lennard-Jones models for the water–carbon interaction are derived from existing high-level ab initio calculations of water adsorbed on graphene models. The resulting potential energy well (εCO &#43; 2εCH ≈ 1 kJ mol−1) is deeper than most of the previously used values in the literature on water in carbon nanotubes (CNTs). Moreover, a substantial anisotropy of the water–carbon interaction (εCO ≈ 2εCH) is obtained, which is neglected in most of the literature. We systematically investigate the effect of this anisotropy on structure and dynamics of TIP5P water confined in narrow, single-walled CNTs by means of molecular dynamics simulations for T = 300 K. While for isotropic models water usually forms one-dimensional, ordered chains inside (6,6) CNTs, we find frequent chain ruptures in simulations with medium to strongly anisotropic potentials. Here, the water molecules tend to form denser clusters displaying a liquid-like behaviour, allowing for self-diffusion along the CNT axis, in contrast to all previous simulations employing spherical (εCH = 0) interaction models. For (7,7) CNTs we observe structures close to trigonal, helical ice nanotubes which exhibit a non-monotonous dependence on the anisotropy of the water–carbon interaction. Both for vanishing and for large values of εCH we find increased fluctuations leading to a more liquid-like behaviour, with enhanced axial diffusion. In contrast, structure and dynamics of water inside (8,8) CNTs are found to be almost independent of the anisotropy of the underlying potential, which is attributed to the higher stability of the non-helical fivefold water prisms. We predict this situation to also prevail for larger CNTs, as the influence of the water–water interaction dominates over that of the water–carbon interaction.">
+<meta name="author" content="Guillermo Pérez-Hernández,&thinsp;Burkhard Schmidt">
+<link rel="canonical" href="https://gph82.github.io/papers/article_10/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.e900fbd2a4a48707f6ed7d3f90a7537cb744b93777ce030a46251a318a2ef56d.css" integrity="sha256-6QD70qSkhwf27X0/kKdTfLdEuTd3zgMKRiUaMYou9W0=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://gph82.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://gph82.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://gph82.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://gph82.github.io/apple-touch-icon.png">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://gph82.github.io/papers/article_10/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://gph82.github.io/papers/article_10/">
+  <meta property="og:site_name" content="Guillermo Pérez-Hernández">
+  <meta property="og:title" content="Anisotropy of the water–carbon interaction: molecular simulations of water in low-diameter carbon nanotubes">
+  <meta property="og:description" content="Effective Lennard-Jones models for the water–carbon interaction are derived from existing high-level ab initio calculations of water adsorbed on graphene models. The resulting potential energy well (εCO &#43; 2εCH ≈ 1 kJ mol−1) is deeper than most of the previously used values in the literature on water in carbon nanotubes (CNTs). Moreover, a substantial anisotropy of the water–carbon interaction (εCO ≈ 2εCH) is obtained, which is neglected in most of the literature. We systematically investigate the effect of this anisotropy on structure and dynamics of TIP5P water confined in narrow, single-walled CNTs by means of molecular dynamics simulations for T = 300 K. While for isotropic models water usually forms one-dimensional, ordered chains inside (6,6) CNTs, we find frequent chain ruptures in simulations with medium to strongly anisotropic potentials. Here, the water molecules tend to form denser clusters displaying a liquid-like behaviour, allowing for self-diffusion along the CNT axis, in contrast to all previous simulations employing spherical (εCH = 0) interaction models. For (7,7) CNTs we observe structures close to trigonal, helical ice nanotubes which exhibit a non-monotonous dependence on the anisotropy of the water–carbon interaction. Both for vanishing and for large values of εCH we find increased fluctuations leading to a more liquid-like behaviour, with enhanced axial diffusion. In contrast, structure and dynamics of water inside (8,8) CNTs are found to be almost independent of the anisotropy of the underlying potential, which is attributed to the higher stability of the non-helical fivefold water prisms. We predict this situation to also prevail for larger CNTs, as the influence of the water–water interaction dominates over that of the water–carbon interaction.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="papers">
+    <meta property="article:published_time" content="2013-01-01T00:00:00+00:00">
+    <meta property="article:modified_time" content="2013-01-01T00:00:00+00:00">
+    <meta property="og:image" content="https://gph82.github.io/paper1.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://gph82.github.io/paper1.png">
+<meta name="twitter:title" content="Anisotropy of the water–carbon interaction: molecular simulations of water in low-diameter carbon nanotubes">
+<meta name="twitter:description" content="Effective Lennard-Jones models for the water–carbon interaction are derived from existing high-level ab initio calculations of water adsorbed on graphene models. The resulting potential energy well (εCO &#43; 2εCH ≈ 1 kJ mol−1) is deeper than most of the previously used values in the literature on water in carbon nanotubes (CNTs). Moreover, a substantial anisotropy of the water–carbon interaction (εCO ≈ 2εCH) is obtained, which is neglected in most of the literature. We systematically investigate the effect of this anisotropy on structure and dynamics of TIP5P water confined in narrow, single-walled CNTs by means of molecular dynamics simulations for T = 300 K. While for isotropic models water usually forms one-dimensional, ordered chains inside (6,6) CNTs, we find frequent chain ruptures in simulations with medium to strongly anisotropic potentials. Here, the water molecules tend to form denser clusters displaying a liquid-like behaviour, allowing for self-diffusion along the CNT axis, in contrast to all previous simulations employing spherical (εCH = 0) interaction models. For (7,7) CNTs we observe structures close to trigonal, helical ice nanotubes which exhibit a non-monotonous dependence on the anisotropy of the water–carbon interaction. Both for vanishing and for large values of εCH we find increased fluctuations leading to a more liquid-like behaviour, with enhanced axial diffusion. In contrast, structure and dynamics of water inside (8,8) CNTs are found to be almost independent of the anisotropy of the underlying potential, which is attributed to the higher stability of the non-helical fivefold water prisms. We predict this situation to also prevail for larger CNTs, as the influence of the water–water interaction dominates over that of the water–carbon interaction.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "",
+      "item": "https://gph82.github.io/papers/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Anisotropy of the water–carbon interaction: molecular simulations of water in low-diameter carbon nanotubes",
+      "item": "https://gph82.github.io/papers/article_10/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Anisotropy of the water–carbon interaction: molecular simulations of water in low-diameter carbon nanotubes",
+  "name": "Anisotropy of the water–carbon interaction: molecular simulations of water in low-diameter carbon nanotubes",
+  "description": "Effective Lennard-Jones models for the water–carbon interaction are derived from existing high-level ab initio calculations of water adsorbed on graphene models. The resulting potential energy well (εCO + 2εCH ≈ 1 kJ mol−1) is deeper than most of the previously used values in the literature on water in carbon nanotubes (CNTs). Moreover, a substantial anisotropy of the water–carbon interaction (εCO ≈ 2εCH) is obtained, which is neglected in most of the literature. We systematically investigate the effect of this anisotropy on structure and dynamics of TIP5P water confined in narrow, single-walled CNTs by means of molecular dynamics simulations for T = 300 K. While for isotropic models water usually forms one-dimensional, ordered chains inside (6,6) CNTs, we find frequent chain ruptures in simulations with medium to strongly anisotropic potentials. Here, the water molecules tend to form denser clusters displaying a liquid-like behaviour, allowing for self-diffusion along the CNT axis, in contrast to all previous simulations employing spherical (εCH = 0) interaction models. For (7,7) CNTs we observe structures close to trigonal, helical ice nanotubes which exhibit a non-monotonous dependence on the anisotropy of the water–carbon interaction. Both for vanishing and for large values of εCH we find increased fluctuations leading to a more liquid-like behaviour, with enhanced axial diffusion. In contrast, structure and dynamics of water inside (8,8) CNTs are found to be almost independent of the anisotropy of the underlying potential, which is attributed to the higher stability of the non-helical fivefold water prisms. We predict this situation to also prevail for larger CNTs, as the influence of the water–water interaction dominates over that of the water–carbon interaction.",
+  "keywords": [
+    
+  ],
+  "articleBody": "Fig. 2: Representative snapshots of our T = 300 K molecular dynamics simulations of water molecules in small CNTs, truncated to a length of 5.5 nm DOI 10.1039/c3cp44278k Abstract Effective Lennard-Jones models for the water–carbon interaction are derived from existing high-level ab initio calculations of water adsorbed on graphene models. The resulting potential energy well (εCO + 2εCH ≈ 1 kJ mol−1) is deeper than most of the previously used values in the literature on water in carbon nanotubes (CNTs). Moreover, a substantial anisotropy of the water–carbon interaction (εCO ≈ 2εCH) is obtained, which is neglected in most of the literature. We systematically investigate the effect of this anisotropy on structure and dynamics of TIP5P water confined in narrow, single-walled CNTs by means of molecular dynamics simulations for T = 300 K. While for isotropic models water usually forms one-dimensional, ordered chains inside (6,6) CNTs, we find frequent chain ruptures in simulations with medium to strongly anisotropic potentials. Here, the water molecules tend to form denser clusters displaying a liquid-like behaviour, allowing for self-diffusion along the CNT axis, in contrast to all previous simulations employing spherical (εCH = 0) interaction models. For (7,7) CNTs we observe structures close to trigonal, helical ice nanotubes which exhibit a non-monotonous dependence on the anisotropy of the water–carbon interaction. Both for vanishing and for large values of εCH we find increased fluctuations leading to a more liquid-like behaviour, with enhanced axial diffusion. In contrast, structure and dynamics of water inside (8,8) CNTs are found to be almost independent of the anisotropy of the underlying potential, which is attributed to the higher stability of the non-helical fivefold water prisms. We predict this situation to also prevail for larger CNTs, as the influence of the water–water interaction dominates over that of the water–carbon interaction.\n",
+  "wordCount" : "298",
+  "inLanguage": "en",
+  "image":"https://gph82.github.io/paper1.png","datePublished": "2013-01-01T00:00:00Z",
+  "dateModified": "2013-01-01T00:00:00Z",
+  "author":[{
+    "@type": "Person",
+    "name": "\u003cb\u003eGuillermo Pérez-Hernández\u003c/b\u003e"
+  }, {
+    "@type": "Person",
+    "name": "Burkhard Schmidt"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://gph82.github.io/papers/article_10/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Guillermo Pérez-Hernández",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://gph82.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" integrity="sha384-wcIxkf4k558AjM3Yz3BBFQUbk/zgIYC2R0QpeeYb+TwlBVMrlgLqwRjRtGZiK7ww" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js" integrity="sha384-hIoBPJpTUs74ddyc4bFZSM1TVlQDA60VBbJS0oA934VSz82sBx1X7kSx2ATBDIyd" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"
+  onload="renderMathInElement(document.body);"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false},
+            {left: "\\begin{equation}", right: "\\end{equation}", display: true},
+            {left: "\\begin{equation*}", right: "\\end{equation*}", display: true},
+            {left: "\\begin{align}", right: "\\end{align}", display: true},
+            {left: "\\begin{align*}", right: "\\end{align*}", display: true},
+            {left: "\\begin{alignat}", right: "\\end{alignat}", display: true},
+            {left: "\\begin{gather}", right: "\\end{gather}", display: true},
+            {left: "\\begin{CD}", right: "\\end{CD}", display: true},
+          ],
+          throwOnError : false
+        });
+    });
+</script>
+ 
+
+
+</head>
+
+<body class="" id="top">
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://gph82.github.io/" accesskey="h" title="Guillermo Pérez-Hernández">
+                <img src="https://gph82.github.io/favicon.ico" alt="" aria-label="logo"
+                    height="18"
+                    width="18">Guillermo Pérez-Hernández</a>
+            <div class="logo-switches">
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://gph82.github.io/papers/" title="Papers">
+                    <span>Papers</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+    <main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Anisotropy of the water–carbon interaction: molecular simulations of water in low-diameter carbon nanotubes
+    </h1>
+    <div class="post-meta"><span title='2013-01-01 00:00:00 +0000 UTC'>January 2013</span>&nbsp;&middot;&nbsp;<b>Guillermo Pérez-Hernández</b>,&thinsp;Burkhard Schmidt&nbsp;&middot;&nbsp;<a href="https://doi.org/10.1039/c3cp44278k" rel="noopener noreferrer" target="_blank">Physical Chemistry Chemical Physics</a>
+
+</div>
+  </header> 
+  <div class="post-content"><h5 id="fig-2--representative-snapshots-of-our-t--300-k-molecular-dynamics-simulations-of-water-molecules-in-small-cnts-truncated-to-a-length-of-55-nm">Fig. 2:  Representative snapshots of our T = 300 K molecular dynamics simulations of water molecules in small CNTs, truncated to a length of 5.5 nm</h5>
+<h2><img loading="lazy" src="/papers/article_10/paper1.png"></h2>
+<h5 id="doi">DOI</h5>
+<h2 id="101039c3cp44278k"><a href="https://doi.org/10.1039/c3cp44278k" target="_blank">10.1039/c3cp44278k</a></h2>
+<h5 id="abstract">Abstract</h5>
+<p>Effective Lennard-Jones models for the water–carbon interaction are derived from existing high-level ab initio calculations of water adsorbed on graphene models. The resulting potential energy well (εCO + 2εCH ≈ 1 kJ mol−1) is deeper than most of the previously used values in the literature on water in carbon nanotubes (CNTs). Moreover, a substantial anisotropy of the water–carbon interaction (εCO ≈ 2εCH) is obtained, which is neglected in most of the literature. We systematically investigate the effect of this anisotropy on structure and dynamics of TIP5P water confined in narrow, single-walled CNTs by means of molecular dynamics simulations for T = 300 K. While for isotropic models water usually forms one-dimensional, ordered chains inside (6,6) CNTs, we find frequent chain ruptures in simulations with medium to strongly anisotropic potentials. Here, the water molecules tend to form denser clusters displaying a liquid-like behaviour, allowing for self-diffusion along the CNT axis, in contrast to all previous simulations employing spherical (εCH = 0) interaction models. For (7,7) CNTs we observe structures close to trigonal, helical ice nanotubes which exhibit a non-monotonous dependence on the anisotropy of the water–carbon interaction. Both for vanishing and for large values of εCH we find increased fluctuations leading to a more liquid-like behaviour, with enhanced axial diffusion. In contrast, structure and dynamics of water inside (8,8) CNTs are found to be almost independent of the anisotropy of the underlying potential, which is attributed to the higher stability of the non-helical fivefold water prisms. We predict this situation to also prevail for larger CNTs, as the influence of the water–water interaction dominates over that of the water–carbon interaction.</p>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2025 Guillermo Pérez-Hernández</span> ·     
+    <span>
+    Powered by 
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">hugo</a>, <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">papermod</a>, &amp;
+        <a href="https://github.com/pmichaillat/hugo-website/" rel="noopener" target="_blank">hugo-website</a>.
+    </span>
+</footer>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+</html>

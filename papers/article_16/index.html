@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Defining the architecture of KPC-2 Carbapenemase: identifying allosteric networks to fight antibiotics resistance | Guillermo Pérez-Hernández</title>
+<meta name="keywords" content="">
+<meta name="description" content="The rise of multi-drug resistance in bacterial pathogens is one of the grand challenges facing medical science. A major concern is the speed of development of β-lactamase-mediated resistance in Gram-negative species, thus putting at risk the efficacy of the most recently approved antibiotics and inhibitors, including carbapenems and avibactam, respectively. New strategies to overcome resistance are urgently required, which will ultimately be facilitated by a deeper understanding of the mechanisms that regulate the function of β-lactamases such as the Klebsiella Pneumoniae carbapenemases (KPCs). Using enhanced sampling computational methods together with site-directed mutagenesis, we report the identification of two “hydrophobic networks” in the KPC-2 enzyme, the integrity of which has been found to be essential for protein stability and corresponding resistance. Present throughout the structure, these networks are responsible for the structural integrity and allosteric signaling. Disruption of the networks leads to a loss of the KPC-2 mediated resistance phenotype, resulting in restored susceptibility to different classes of β-lactam antibiotics including carbapenems and cephalosporins. The ”hydrophobic networks” were found to be highly conserved among class-A β-lactamases, which implies their suitability for exploitation as a potential target for therapeutic intervention.">
+<meta name="author" content="Ioannis Galdadas,&thinsp;Silvia Lovera,&thinsp;Guillermo Pérez-Hernández,&thinsp;Melissa D. Barnes,&thinsp;Jess Healy,&thinsp;Hamidreza Afsharikho,&thinsp;Neil Woodford,&thinsp;Robert A. Bonomo,&thinsp;Francesco L. Gervasio,&thinsp;Shozeb Haider">
+<link rel="canonical" href="https://gph82.github.io/papers/article_16/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.e900fbd2a4a48707f6ed7d3f90a7537cb744b93777ce030a46251a318a2ef56d.css" integrity="sha256-6QD70qSkhwf27X0/kKdTfLdEuTd3zgMKRiUaMYou9W0=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://gph82.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://gph82.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://gph82.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://gph82.github.io/apple-touch-icon.png">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://gph82.github.io/papers/article_16/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://gph82.github.io/papers/article_16/">
+  <meta property="og:site_name" content="Guillermo Pérez-Hernández">
+  <meta property="og:title" content="Defining the architecture of KPC-2 Carbapenemase: identifying allosteric networks to fight antibiotics resistance">
+  <meta property="og:description" content="The rise of multi-drug resistance in bacterial pathogens is one of the grand challenges facing medical science. A major concern is the speed of development of β-lactamase-mediated resistance in Gram-negative species, thus putting at risk the efficacy of the most recently approved antibiotics and inhibitors, including carbapenems and avibactam, respectively. New strategies to overcome resistance are urgently required, which will ultimately be facilitated by a deeper understanding of the mechanisms that regulate the function of β-lactamases such as the Klebsiella Pneumoniae carbapenemases (KPCs). Using enhanced sampling computational methods together with site-directed mutagenesis, we report the identification of two “hydrophobic networks” in the KPC-2 enzyme, the integrity of which has been found to be essential for protein stability and corresponding resistance. Present throughout the structure, these networks are responsible for the structural integrity and allosteric signaling. Disruption of the networks leads to a loss of the KPC-2 mediated resistance phenotype, resulting in restored susceptibility to different classes of β-lactam antibiotics including carbapenems and cephalosporins. The ”hydrophobic networks” were found to be highly conserved among class-A β-lactamases, which implies their suitability for exploitation as a potential target for therapeutic intervention.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="papers">
+    <meta property="article:published_time" content="2018-08-27T00:00:00+00:00">
+    <meta property="article:modified_time" content="2018-08-27T00:00:00+00:00">
+    <meta property="og:image" content="https://gph82.github.io/paper1.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://gph82.github.io/paper1.png">
+<meta name="twitter:title" content="Defining the architecture of KPC-2 Carbapenemase: identifying allosteric networks to fight antibiotics resistance">
+<meta name="twitter:description" content="The rise of multi-drug resistance in bacterial pathogens is one of the grand challenges facing medical science. A major concern is the speed of development of β-lactamase-mediated resistance in Gram-negative species, thus putting at risk the efficacy of the most recently approved antibiotics and inhibitors, including carbapenems and avibactam, respectively. New strategies to overcome resistance are urgently required, which will ultimately be facilitated by a deeper understanding of the mechanisms that regulate the function of β-lactamases such as the Klebsiella Pneumoniae carbapenemases (KPCs). Using enhanced sampling computational methods together with site-directed mutagenesis, we report the identification of two “hydrophobic networks” in the KPC-2 enzyme, the integrity of which has been found to be essential for protein stability and corresponding resistance. Present throughout the structure, these networks are responsible for the structural integrity and allosteric signaling. Disruption of the networks leads to a loss of the KPC-2 mediated resistance phenotype, resulting in restored susceptibility to different classes of β-lactam antibiotics including carbapenems and cephalosporins. The ”hydrophobic networks” were found to be highly conserved among class-A β-lactamases, which implies their suitability for exploitation as a potential target for therapeutic intervention.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "",
+      "item": "https://gph82.github.io/papers/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Defining the architecture of KPC-2 Carbapenemase: identifying allosteric networks to fight antibiotics resistance",
+      "item": "https://gph82.github.io/papers/article_16/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Defining the architecture of KPC-2 Carbapenemase: identifying allosteric networks to fight antibiotics resistance",
+  "name": "Defining the architecture of KPC-2 Carbapenemase: identifying allosteric networks to fight antibiotics resistance",
+  "description": "The rise of multi-drug resistance in bacterial pathogens is one of the grand challenges facing medical science. A major concern is the speed of development of β-lactamase-mediated resistance in Gram-negative species, thus putting at risk the efficacy of the most recently approved antibiotics and inhibitors, including carbapenems and avibactam, respectively. New strategies to overcome resistance are urgently required, which will ultimately be facilitated by a deeper understanding of the mechanisms that regulate the function of β-lactamases such as the Klebsiella Pneumoniae carbapenemases (KPCs). Using enhanced sampling computational methods together with site-directed mutagenesis, we report the identification of two “hydrophobic networks” in the KPC-2 enzyme, the integrity of which has been found to be essential for protein stability and corresponding resistance. Present throughout the structure, these networks are responsible for the structural integrity and allosteric signaling. Disruption of the networks leads to a loss of the KPC-2 mediated resistance phenotype, resulting in restored susceptibility to different classes of β-lactam antibiotics including carbapenems and cephalosporins. The ”hydrophobic networks” were found to be highly conserved among class-A β-lactamases, which implies their suitability for exploitation as a potential target for therapeutic intervention.",
+  "keywords": [
+    
+  ],
+  "articleBody": "Structure of KPC-2 β-lactamase. The three loops that surround the active site, i.e. the Ω loop, the hinge region and the loop between α3 and α4 helices are depicted in pink, orange and yellow respectively. : Structure of KPC-2 β-lactamase. The three loops that surround the active site, i.e. the Ω loop, the hinge region and the loop between α3 and α4 helices are depicted in pink, orange and yellow respectively. DOI 10.1038/s41598-018-31176-0 Abstract The rise of multi-drug resistance in bacterial pathogens is one of the grand challenges facing medical science. A major concern is the speed of development of β-lactamase-mediated resistance in Gram-negative species, thus putting at risk the efficacy of the most recently approved antibiotics and inhibitors, including carbapenems and avibactam, respectively. New strategies to overcome resistance are urgently required, which will ultimately be facilitated by a deeper understanding of the mechanisms that regulate the function of β-lactamases such as the Klebsiella Pneumoniae carbapenemases (KPCs). Using enhanced sampling computational methods together with site-directed mutagenesis, we report the identification of two “hydrophobic networks” in the KPC-2 enzyme, the integrity of which has been found to be essential for protein stability and corresponding resistance. Present throughout the structure, these networks are responsible for the structural integrity and allosteric signaling. Disruption of the networks leads to a loss of the KPC-2 mediated resistance phenotype, resulting in restored susceptibility to different classes of β-lactam antibiotics including carbapenems and cephalosporins. The ”hydrophobic networks” were found to be highly conserved among class-A β-lactamases, which implies their suitability for exploitation as a potential target for therapeutic intervention.\n",
+  "wordCount" : "262",
+  "inLanguage": "en",
+  "image":"https://gph82.github.io/paper1.png","datePublished": "2018-08-27T00:00:00Z",
+  "dateModified": "2018-08-27T00:00:00Z",
+  "author":[{
+    "@type": "Person",
+    "name": "Ioannis Galdadas"
+  }, {
+    "@type": "Person",
+    "name": "Silvia Lovera"
+  }, {
+    "@type": "Person",
+    "name": "\u003cb\u003eGuillermo Pérez-Hernández\u003c/b\u003e"
+  }, {
+    "@type": "Person",
+    "name": "Melissa D. Barnes"
+  }, {
+    "@type": "Person",
+    "name": "Jess Healy"
+  }, {
+    "@type": "Person",
+    "name": "Hamidreza Afsharikho"
+  }, {
+    "@type": "Person",
+    "name": "Neil Woodford"
+  }, {
+    "@type": "Person",
+    "name": "Robert A. Bonomo"
+  }, {
+    "@type": "Person",
+    "name": "Francesco L. Gervasio"
+  }, {
+    "@type": "Person",
+    "name": "Shozeb Haider"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://gph82.github.io/papers/article_16/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Guillermo Pérez-Hernández",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://gph82.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" integrity="sha384-wcIxkf4k558AjM3Yz3BBFQUbk/zgIYC2R0QpeeYb+TwlBVMrlgLqwRjRtGZiK7ww" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js" integrity="sha384-hIoBPJpTUs74ddyc4bFZSM1TVlQDA60VBbJS0oA934VSz82sBx1X7kSx2ATBDIyd" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"
+  onload="renderMathInElement(document.body);"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false},
+            {left: "\\begin{equation}", right: "\\end{equation}", display: true},
+            {left: "\\begin{equation*}", right: "\\end{equation*}", display: true},
+            {left: "\\begin{align}", right: "\\end{align}", display: true},
+            {left: "\\begin{align*}", right: "\\end{align*}", display: true},
+            {left: "\\begin{alignat}", right: "\\end{alignat}", display: true},
+            {left: "\\begin{gather}", right: "\\end{gather}", display: true},
+            {left: "\\begin{CD}", right: "\\end{CD}", display: true},
+          ],
+          throwOnError : false
+        });
+    });
+</script>
+ 
+
+
+</head>
+
+<body class="" id="top">
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://gph82.github.io/" accesskey="h" title="Guillermo Pérez-Hernández">
+                <img src="https://gph82.github.io/favicon.ico" alt="" aria-label="logo"
+                    height="18"
+                    width="18">Guillermo Pérez-Hernández</a>
+            <div class="logo-switches">
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://gph82.github.io/papers/" title="Papers">
+                    <span>Papers</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+    <main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Defining the architecture of KPC-2 Carbapenemase: identifying allosteric networks to fight antibiotics resistance
+    </h1>
+    <div class="post-meta"><span title='2018-08-27 00:00:00 +0000 UTC'>August 2018</span>&nbsp;&middot;&nbsp;Ioannis Galdadas,&thinsp;Silvia Lovera,&thinsp;<b>Guillermo Pérez-Hernández</b>,&thinsp;Melissa D. Barnes,&thinsp;Jess Healy,&thinsp;Hamidreza Afsharikho,&thinsp;Neil Woodford,&thinsp;Robert A. Bonomo,&thinsp;Francesco L. Gervasio,&thinsp;Shozeb Haider&nbsp;&middot;&nbsp;<a href="https://doi.org/10.1038/s41598-018-31176-0" rel="noopener noreferrer" target="_blank">Scientific Reports</a>
+
+</div>
+  </header> 
+  <div class="post-content"><h5 id="structure-of-kpc-2-β-lactamase-the-three-loops-that-surround-the-active-site-ie-the-ω-loop-the-hinge-region-and-the-loop-between-α3-and-α4-helices-are-depicted-in-pink-orange-and-yellow-respectively--structure-of-kpc-2-β-lactamase-the-three-loops-that-surround-the-active-site-ie-the-ω-loop-the-hinge-region-and-the-loop-between-α3-and-α4-helices-are-depicted-in-pink-orange-and-yellow-respectively">Structure of KPC-2 β-lactamase. The three loops that surround the active site, i.e. the Ω loop, the hinge region and the loop between α3 and α4 helices are depicted in pink, orange and yellow respectively. : Structure of KPC-2 β-lactamase. The three loops that surround the active site, i.e. the Ω loop, the hinge region and the loop between α3 and α4 helices are depicted in pink, orange and yellow respectively.</h5>
+<h2><img loading="lazy" src="/papers/article_16/paper1.png"></h2>
+<h5 id="doi">DOI</h5>
+<h2 id="101038s41598-018-31176-0"><a href="https://doi.org/10.1038/s41598-018-31176-0" target="_blank">10.1038/s41598-018-31176-0</a></h2>
+<h5 id="abstract">Abstract</h5>
+<p>The rise of multi-drug resistance in bacterial pathogens is one of the grand challenges facing medical science. A major concern is the speed of development of β-lactamase-mediated resistance in Gram-negative species, thus putting at risk the efficacy of the most recently approved antibiotics and inhibitors, including carbapenems and avibactam, respectively. New strategies to overcome resistance are urgently required, which will ultimately be facilitated by a deeper understanding of the mechanisms that regulate the function of β-lactamases such as the Klebsiella Pneumoniae carbapenemases (KPCs). Using enhanced sampling computational methods together with site-directed mutagenesis, we report the identification of two “hydrophobic networks” in the KPC-2 enzyme, the integrity of which has been found to be essential for protein stability and corresponding resistance. Present throughout the structure, these networks are responsible for the structural integrity and allosteric signaling. Disruption of the networks leads to a loss of the KPC-2 mediated resistance phenotype, resulting in restored susceptibility to different classes of β-lactam antibiotics including carbapenems and cephalosporins. The ”hydrophobic networks” were found to be highly conserved among class-A β-lactamases, which implies their suitability for exploitation as a potential target for therapeutic intervention.</p>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2025 Guillermo Pérez-Hernández</span> ·     
+    <span>
+    Powered by 
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">hugo</a>, <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">papermod</a>, &amp;
+        <a href="https://github.com/pmichaillat/hugo-website/" rel="noopener" target="_blank">hugo-website</a>.
+    </span>
+</footer>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+</html>

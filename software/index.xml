@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Scientific Software Contributions on Guillermo Pérez-Hernández</title>
+    <link>https://gph82.github.io/software/</link>
+    <description>Recent content in Scientific Software Contributions on Guillermo Pérez-Hernández</description>
+    <generator>Hugo -- 0.148.0</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 21 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://gph82.github.io/software/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>mdciao: Accessible Analysis and Visualization of Molecular Dynamics Simulation Data</title>
+      <link>https://gph82.github.io/software/article_27/</link>
+      <pubDate>Mon, 21 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://gph82.github.io/software/article_27/</guid>
+      <description>We present mdciao, an open-source command line tool and Python Application-Programming-Interface (API) for easy, one-shot analysis and representation of molecular dynamics (MD) simulation data. Building upon the widely used concept of residue-residue contact-frequencies, mdciao offers a wide spectrum of further analysis and representations, enriched with available domain specific annotations. The user-friendly interface offers pre-packaged solutions for non-expert users, while keeping customizability for expert ones. Emphasis has been put into automatically producing annotated, production-ready figures and tables. Furthermore, seamless on-the-fly query and inclusion of domain-specific generic residue numbering for GPCRs, GAIN-domains, G-proteins, and kinases is made possible through online lookups. This allows for easy selection and comparison across different systems, regardless of sequence identity, target residues or domains. Finally, the fully documented Python API allows users to include the basic or advanced mdciao functions in their analysis workflows, and provides numerous examples and Jupyter Notebook Tutorials. The source code is published under the GNU Lesser General Public License v3.0 or later and hosted on https://github.com/gph82/mdciao, and the documentation, including guides and examples, can be found at https://www.mdciao.org</description>
+    </item>
+    <item>
+      <title>PyEMMA 2: A Software Package for Estimation, Validation, and Analysis of Markov Models</title>
+      <link>https://gph82.github.io/software/article_13/</link>
+      <pubDate>Tue, 10 Nov 2015 00:00:00 +0000</pubDate>
+      <guid>https://gph82.github.io/software/article_13/</guid>
+      <description>Markov (state) models (MSMs) and related models of molecular kinetics have recently received a surge of interest as they can systematically reconcile simulation data from either a few long or many short simulations and allow us to analyze the essential metastable structures, thermodynamics, and kinetics of the molecular system under investigation. However, the estimation, validation, and analysis of such models is far from trivial and involves sophisticated and often numerically sensitive methods. In this work we present the open-source Python package PyEMMA (http://pyemma.org) that provides accurate and efficient algorithms for kinetic model construction. PyEMMA can read all common molecular dynamics data formats, helps in the selection of input features, provides easy access to dimension reduction algorithms such as principal component analysis (PCA) and time-lagged independent component analysis (TICA) and clustering algorithms such as k-means, and contains estimators for MSMs, hidden Markov models, and several other models. Systematic model validation and error calculation methods are provided. PyEMMA offers a wealth of analysis functions such that the user can conveniently compute molecular observables of interest. We have derived a systematic and accurate way to coarse-grain MSMs to few states and to illustrate the structures of the metastable states of the system. Plotting functions to produce a manuscript-ready presentation of the results are available. In this work, we demonstrate the features of the software and show new methodological concepts and results produced by PyEMMA.</description>
+    </item>
+  </channel>
+</rss>

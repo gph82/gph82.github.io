@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Exploring the Dynamics of Propeller Loops in Human Telomeric DNA Quadruplexes Using Atomistic Simulations. | Guillermo Pérez-Hernández</title>
+<meta name="keywords" content="">
+<meta name="description" content="We have carried out a series of extended unbiased molecular dynamics (MD) simulations (up to 10 μs long, ∼162 μs in total) complemented by replica-exchange with the collective variable tempering (RECT) approach for several human telomeric DNA G-quadruplex (GQ) topologies with TTA propeller loops. We used different AMBER DNA force-field variants and also processed simulations by Markov State Model (MSM) analysis. The slow conformational transitions in the propeller loops took place on a scale of a few μs, emphasizing the need for long simulations in studies of GQ dynamics. The propeller loops sampled similar ensembles for all GQ topologies and for all force-field dihedral-potential variants. The outcomes of standard and RECT simulations were consistent and captured similar spectrum of loop conformations. However, the most common crystallographic loop conformation was very unstable with all force-field versions. Although the loss of canonical γ-trans state of the first propeller loop nucleotide could be related to the indispensable bsc0 α/γ dihedral potential, even supporting this particular dihedral by a bias was insufficient to populate the experimentally dominant loop conformation. In conclusion, while our simulations were capable of providing a reasonable albeit not converged sampling of the TTA propeller loop conformational space, the force-field description still remained far from satisfactory.">
+<meta name="author" content="Barira Islam,&thinsp;Petr Stadlbauer,&thinsp;Alejandro Gil-Ley,&thinsp;Guillermo Pérez-Hernández,&thinsp;Shozeb Haider,&thinsp;Stephen Neidle,&thinsp;Giovanni Bussi,&thinsp;Pavel Banas,&thinsp;Michal Otyepka,&thinsp;Jiri Sponer">
+<link rel="canonical" href="https://gph82.github.io/papers/article_15/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.e900fbd2a4a48707f6ed7d3f90a7537cb744b93777ce030a46251a318a2ef56d.css" integrity="sha256-6QD70qSkhwf27X0/kKdTfLdEuTd3zgMKRiUaMYou9W0=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://gph82.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://gph82.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://gph82.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://gph82.github.io/apple-touch-icon.png">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://gph82.github.io/papers/article_15/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://gph82.github.io/papers/article_15/">
+  <meta property="og:site_name" content="Guillermo Pérez-Hernández">
+  <meta property="og:title" content="Exploring the Dynamics of Propeller Loops in Human Telomeric DNA Quadruplexes Using Atomistic Simulations.">
+  <meta property="og:description" content="We have carried out a series of extended unbiased molecular dynamics (MD) simulations (up to 10 μs long, ∼162 μs in total) complemented by replica-exchange with the collective variable tempering (RECT) approach for several human telomeric DNA G-quadruplex (GQ) topologies with TTA propeller loops. We used different AMBER DNA force-field variants and also processed simulations by Markov State Model (MSM) analysis. The slow conformational transitions in the propeller loops took place on a scale of a few μs, emphasizing the need for long simulations in studies of GQ dynamics. The propeller loops sampled similar ensembles for all GQ topologies and for all force-field dihedral-potential variants. The outcomes of standard and RECT simulations were consistent and captured similar spectrum of loop conformations. However, the most common crystallographic loop conformation was very unstable with all force-field versions. Although the loss of canonical γ-trans state of the first propeller loop nucleotide could be related to the indispensable bsc0 α/γ dihedral potential, even supporting this particular dihedral by a bias was insufficient to populate the experimentally dominant loop conformation. In conclusion, while our simulations were capable of providing a reasonable albeit not converged sampling of the TTA propeller loop conformational space, the force-field description still remained far from satisfactory.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="papers">
+    <meta property="article:published_time" content="2017-05-18T00:00:00+00:00">
+    <meta property="article:modified_time" content="2017-05-18T00:00:00+00:00">
+    <meta property="og:image" content="https://gph82.github.io/paper1.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://gph82.github.io/paper1.png">
+<meta name="twitter:title" content="Exploring the Dynamics of Propeller Loops in Human Telomeric DNA Quadruplexes Using Atomistic Simulations.">
+<meta name="twitter:description" content="We have carried out a series of extended unbiased molecular dynamics (MD) simulations (up to 10 μs long, ∼162 μs in total) complemented by replica-exchange with the collective variable tempering (RECT) approach for several human telomeric DNA G-quadruplex (GQ) topologies with TTA propeller loops. We used different AMBER DNA force-field variants and also processed simulations by Markov State Model (MSM) analysis. The slow conformational transitions in the propeller loops took place on a scale of a few μs, emphasizing the need for long simulations in studies of GQ dynamics. The propeller loops sampled similar ensembles for all GQ topologies and for all force-field dihedral-potential variants. The outcomes of standard and RECT simulations were consistent and captured similar spectrum of loop conformations. However, the most common crystallographic loop conformation was very unstable with all force-field versions. Although the loss of canonical γ-trans state of the first propeller loop nucleotide could be related to the indispensable bsc0 α/γ dihedral potential, even supporting this particular dihedral by a bias was insufficient to populate the experimentally dominant loop conformation. In conclusion, while our simulations were capable of providing a reasonable albeit not converged sampling of the TTA propeller loop conformational space, the force-field description still remained far from satisfactory.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "",
+      "item": "https://gph82.github.io/papers/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Exploring the Dynamics of Propeller Loops in Human Telomeric DNA Quadruplexes Using Atomistic Simulations.",
+      "item": "https://gph82.github.io/papers/article_15/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Exploring the Dynamics of Propeller Loops in Human Telomeric DNA Quadruplexes Using Atomistic Simulations.",
+  "name": "Exploring the Dynamics of Propeller Loops in Human Telomeric DNA Quadruplexes Using Atomistic Simulations.",
+  "description": "We have carried out a series of extended unbiased molecular dynamics (MD) simulations (up to 10 μs long, ∼162 μs in total) complemented by replica-exchange with the collective variable tempering (RECT) approach for several human telomeric DNA G-quadruplex (GQ) topologies with TTA propeller loops. We used different AMBER DNA force-field variants and also processed simulations by Markov State Model (MSM) analysis. The slow conformational transitions in the propeller loops took place on a scale of a few μs, emphasizing the need for long simulations in studies of GQ dynamics. The propeller loops sampled similar ensembles for all GQ topologies and for all force-field dihedral-potential variants. The outcomes of standard and RECT simulations were consistent and captured similar spectrum of loop conformations. However, the most common crystallographic loop conformation was very unstable with all force-field versions. Although the loss of canonical γ-trans state of the first propeller loop nucleotide could be related to the indispensable bsc0 α/γ dihedral potential, even supporting this particular dihedral by a bias was insufficient to populate the experimentally dominant loop conformation. In conclusion, while our simulations were capable of providing a reasonable albeit not converged sampling of the TTA propeller loop conformational space, the force-field description still remained far from satisfactory.",
+  "keywords": [
+    
+  ],
+  "articleBody": "Fig. 9: Markov state modeling DOI 10.1021/acs.jctc.7b00226 Abstract We have carried out a series of extended unbiased molecular dynamics (MD) simulations (up to 10 μs long, ∼162 μs in total) complemented by replica-exchange with the collective variable tempering (RECT) approach for several human telomeric DNA G-quadruplex (GQ) topologies with TTA propeller loops. We used different AMBER DNA force-field variants and also processed simulations by Markov State Model (MSM) analysis. The slow conformational transitions in the propeller loops took place on a scale of a few μs, emphasizing the need for long simulations in studies of GQ dynamics. The propeller loops sampled similar ensembles for all GQ topologies and for all force-field dihedral-potential variants. The outcomes of standard and RECT simulations were consistent and captured similar spectrum of loop conformations. However, the most common crystallographic loop conformation was very unstable with all force-field versions. Although the loss of canonical γ-trans state of the first propeller loop nucleotide could be related to the indispensable bsc0 α/γ dihedral potential, even supporting this particular dihedral by a bias was insufficient to populate the experimentally dominant loop conformation. In conclusion, while our simulations were capable of providing a reasonable albeit not converged sampling of the TTA propeller loop conformational space, the force-field description still remained far from satisfactory.\n",
+  "wordCount" : "213",
+  "inLanguage": "en",
+  "image":"https://gph82.github.io/paper1.png","datePublished": "2017-05-18T00:00:00Z",
+  "dateModified": "2017-05-18T00:00:00Z",
+  "author":[{
+    "@type": "Person",
+    "name": "Barira Islam"
+  }, {
+    "@type": "Person",
+    "name": "Petr Stadlbauer"
+  }, {
+    "@type": "Person",
+    "name": "Alejandro Gil-Ley"
+  }, {
+    "@type": "Person",
+    "name": "\u003cb\u003eGuillermo Pérez-Hernández\u003c/b\u003e"
+  }, {
+    "@type": "Person",
+    "name": "Shozeb Haider"
+  }, {
+    "@type": "Person",
+    "name": "Stephen Neidle"
+  }, {
+    "@type": "Person",
+    "name": "Giovanni Bussi"
+  }, {
+    "@type": "Person",
+    "name": "Pavel Banas"
+  }, {
+    "@type": "Person",
+    "name": "Michal Otyepka"
+  }, {
+    "@type": "Person",
+    "name": "Jiri Sponer"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://gph82.github.io/papers/article_15/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Guillermo Pérez-Hernández",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://gph82.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" integrity="sha384-wcIxkf4k558AjM3Yz3BBFQUbk/zgIYC2R0QpeeYb+TwlBVMrlgLqwRjRtGZiK7ww" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js" integrity="sha384-hIoBPJpTUs74ddyc4bFZSM1TVlQDA60VBbJS0oA934VSz82sBx1X7kSx2ATBDIyd" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"
+  onload="renderMathInElement(document.body);"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false},
+            {left: "\\begin{equation}", right: "\\end{equation}", display: true},
+            {left: "\\begin{equation*}", right: "\\end{equation*}", display: true},
+            {left: "\\begin{align}", right: "\\end{align}", display: true},
+            {left: "\\begin{align*}", right: "\\end{align*}", display: true},
+            {left: "\\begin{alignat}", right: "\\end{alignat}", display: true},
+            {left: "\\begin{gather}", right: "\\end{gather}", display: true},
+            {left: "\\begin{CD}", right: "\\end{CD}", display: true},
+          ],
+          throwOnError : false
+        });
+    });
+</script>
+ 
+
+
+</head>
+
+<body class="" id="top">
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://gph82.github.io/" accesskey="h" title="Guillermo Pérez-Hernández">
+                <img src="https://gph82.github.io/favicon.ico" alt="" aria-label="logo"
+                    height="18"
+                    width="18">Guillermo Pérez-Hernández</a>
+            <div class="logo-switches">
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://gph82.github.io/papers/" title="Papers">
+                    <span>Papers</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+    <main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Exploring the Dynamics of Propeller Loops in Human Telomeric DNA Quadruplexes Using Atomistic Simulations.
+    </h1>
+    <div class="post-meta"><span title='2017-05-18 00:00:00 +0000 UTC'>May 2017</span>&nbsp;&middot;&nbsp;Barira Islam,&thinsp;Petr Stadlbauer,&thinsp;Alejandro Gil-Ley,&thinsp;<b>Guillermo Pérez-Hernández</b>,&thinsp;Shozeb Haider,&thinsp;Stephen Neidle,&thinsp;Giovanni Bussi,&thinsp;Pavel Banas,&thinsp;Michal Otyepka,&thinsp;Jiri Sponer&nbsp;&middot;&nbsp;<a href="https://doi.org/10.1021/acs.jctc.7b00226" rel="noopener noreferrer" target="_blank">Journal of chemical theory and computation</a>
+
+</div>
+  </header> 
+  <div class="post-content"><h5 id="fig-9-markov-state-modeling">Fig. 9: Markov state modeling</h5>
+<h2><img loading="lazy" src="/papers/article_15/paper1.png"></h2>
+<h5 id="doi">DOI</h5>
+<h2 id="101021acsjctc7b00226"><a href="https://doi.org/10.1021/acs.jctc.7b00226" target="_blank">10.1021/acs.jctc.7b00226</a></h2>
+<h5 id="abstract">Abstract</h5>
+<p>We have carried out a series of extended unbiased molecular dynamics (MD) simulations (up to 10 μs long, ∼162 μs in total) complemented by replica-exchange with the collective variable tempering (RECT) approach for several human telomeric DNA G-quadruplex (GQ) topologies with TTA propeller loops. We used different AMBER DNA force-field variants and also processed simulations by Markov State Model (MSM) analysis. The slow conformational transitions in the propeller loops took place on a scale of a few μs, emphasizing the need for long simulations in studies of GQ dynamics. The propeller loops sampled similar ensembles for all GQ topologies and for all force-field dihedral-potential variants. The outcomes of standard and RECT simulations were consistent and captured similar spectrum of loop conformations. However, the most common crystallographic loop conformation was very unstable with all force-field versions. Although the loss of canonical γ-trans state of the first propeller loop nucleotide could be related to the indispensable bsc0 α/γ dihedral potential, even supporting this particular dihedral by a bias was insufficient to populate the experimentally dominant loop conformation. In conclusion, while our simulations were capable of providing a reasonable albeit not converged sampling of the TTA propeller loop conformational space, the force-field description still remained far from satisfactory.</p>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2025 Guillermo Pérez-Hernández</span> ·     
+    <span>
+    Powered by 
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">hugo</a>, <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">papermod</a>, &amp;
+        <a href="https://github.com/pmichaillat/hugo-website/" rel="noopener" target="_blank">hugo-website</a>.
+    </span>
+</footer>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+</html>

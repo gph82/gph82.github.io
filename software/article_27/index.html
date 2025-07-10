@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>mdciao: Accessible Analysis and Visualization of Molecular Dynamics Simulation Data | Guillermo Pérez-Hernández</title>
+<meta name="keywords" content="">
+<meta name="description" content="We present mdciao, an open-source command line tool and Python Application-Programming-Interface (API) for easy, one-shot analysis and representation of molecular dynamics (MD) simulation data. Building upon the widely used concept of residue-residue contact-frequencies, mdciao offers a wide spectrum of further analysis and representations, enriched with available domain specific annotations. The user-friendly interface offers pre-packaged solutions for non-expert users, while keeping customizability for expert ones. Emphasis has been put into automatically producing annotated, production-ready figures and tables. Furthermore, seamless on-the-fly query and inclusion of domain-specific generic residue numbering for GPCRs, GAIN-domains, G-proteins, and kinases is made possible through online lookups. This allows for easy selection and comparison across different systems, regardless of sequence identity, target residues or domains. Finally, the fully documented Python API allows users to include the basic or advanced mdciao functions in their analysis workflows, and provides numerous examples and Jupyter Notebook Tutorials. The source code is published under the GNU Lesser General Public License v3.0 or later and hosted on https://github.com/gph82/mdciao, and the documentation, including guides and examples, can be found at https://www.mdciao.org">
+<meta name="author" content="Guillermo Pérez-Hernández,&thinsp;Peter W. Hildebrand">
+<link rel="canonical" href="https://gph82.github.io/software/article_27/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.e900fbd2a4a48707f6ed7d3f90a7537cb744b93777ce030a46251a318a2ef56d.css" integrity="sha256-6QD70qSkhwf27X0/kKdTfLdEuTd3zgMKRiUaMYou9W0=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://gph82.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://gph82.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://gph82.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://gph82.github.io/apple-touch-icon.png">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://gph82.github.io/software/article_27/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://gph82.github.io/software/article_27/">
+  <meta property="og:site_name" content="Guillermo Pérez-Hernández">
+  <meta property="og:title" content="mdciao: Accessible Analysis and Visualization of Molecular Dynamics Simulation Data">
+  <meta property="og:description" content="We present mdciao, an open-source command line tool and Python Application-Programming-Interface (API) for easy, one-shot analysis and representation of molecular dynamics (MD) simulation data. Building upon the widely used concept of residue-residue contact-frequencies, mdciao offers a wide spectrum of further analysis and representations, enriched with available domain specific annotations. The user-friendly interface offers pre-packaged solutions for non-expert users, while keeping customizability for expert ones. Emphasis has been put into automatically producing annotated, production-ready figures and tables. Furthermore, seamless on-the-fly query and inclusion of domain-specific generic residue numbering for GPCRs, GAIN-domains, G-proteins, and kinases is made possible through online lookups. This allows for easy selection and comparison across different systems, regardless of sequence identity, target residues or domains. Finally, the fully documented Python API allows users to include the basic or advanced mdciao functions in their analysis workflows, and provides numerous examples and Jupyter Notebook Tutorials. The source code is published under the GNU Lesser General Public License v3.0 or later and hosted on https://github.com/gph82/mdciao, and the documentation, including guides and examples, can be found at https://www.mdciao.org">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="software">
+    <meta property="article:published_time" content="2025-04-21T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-04-21T00:00:00+00:00">
+    <meta property="og:image" content="https://gph82.github.io/paper1.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://gph82.github.io/paper1.png">
+<meta name="twitter:title" content="mdciao: Accessible Analysis and Visualization of Molecular Dynamics Simulation Data">
+<meta name="twitter:description" content="We present mdciao, an open-source command line tool and Python Application-Programming-Interface (API) for easy, one-shot analysis and representation of molecular dynamics (MD) simulation data. Building upon the widely used concept of residue-residue contact-frequencies, mdciao offers a wide spectrum of further analysis and representations, enriched with available domain specific annotations. The user-friendly interface offers pre-packaged solutions for non-expert users, while keeping customizability for expert ones. Emphasis has been put into automatically producing annotated, production-ready figures and tables. Furthermore, seamless on-the-fly query and inclusion of domain-specific generic residue numbering for GPCRs, GAIN-domains, G-proteins, and kinases is made possible through online lookups. This allows for easy selection and comparison across different systems, regardless of sequence identity, target residues or domains. Finally, the fully documented Python API allows users to include the basic or advanced mdciao functions in their analysis workflows, and provides numerous examples and Jupyter Notebook Tutorials. The source code is published under the GNU Lesser General Public License v3.0 or later and hosted on https://github.com/gph82/mdciao, and the documentation, including guides and examples, can be found at https://www.mdciao.org">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Scientific Software Contributions",
+      "item": "https://gph82.github.io/software/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "mdciao: Accessible Analysis and Visualization of Molecular Dynamics Simulation Data",
+      "item": "https://gph82.github.io/software/article_27/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "mdciao: Accessible Analysis and Visualization of Molecular Dynamics Simulation Data",
+  "name": "mdciao: Accessible Analysis and Visualization of Molecular Dynamics Simulation Data",
+  "description": "We present mdciao, an open-source command line tool and Python Application-Programming-Interface (API) for easy, one-shot analysis and representation of molecular dynamics (MD) simulation data. Building upon the widely used concept of residue-residue contact-frequencies, mdciao offers a wide spectrum of further analysis and representations, enriched with available domain specific annotations. The user-friendly interface offers pre-packaged solutions for non-expert users, while keeping customizability for expert ones. Emphasis has been put into automatically producing annotated, production-ready figures and tables. Furthermore, seamless on-the-fly query and inclusion of domain-specific generic residue numbering for GPCRs, GAIN-domains, G-proteins, and kinases is made possible through online lookups. This allows for easy selection and comparison across different systems, regardless of sequence identity, target residues or domains. Finally, the fully documented Python API allows users to include the basic or advanced mdciao functions in their analysis workflows, and provides numerous examples and Jupyter Notebook Tutorials. The source code is published under the GNU Lesser General Public License v3.0 or later and hosted on https://github.com/gph82/mdciao, and the documentation, including guides and examples, can be found at https://www.mdciao.org",
+  "keywords": [
+    
+  ],
+  "articleBody": "Fig 1: Things to do after installing mdciao DOI 10.1371/journal.pcbi.1012837 Abstract We present mdciao, an open-source command line tool and Python Application-Programming-Interface (API) for easy, one-shot analysis and representation of molecular dynamics (MD) simulation data. Building upon the widely used concept of residue-residue contact-frequencies, mdciao offers a wide spectrum of further analysis and representations, enriched with available domain specific annotations. The user-friendly interface offers pre-packaged solutions for non-expert users, while keeping customizability for expert ones. Emphasis has been put into automatically producing annotated, production-ready figures and tables. Furthermore, seamless on-the-fly query and inclusion of domain-specific generic residue numbering for GPCRs, GAIN-domains, G-proteins, and kinases is made possible through online lookups. This allows for easy selection and comparison across different systems, regardless of sequence identity, target residues or domains. Finally, the fully documented Python API allows users to include the basic or advanced mdciao functions in their analysis workflows, and provides numerous examples and Jupyter Notebook Tutorials. The source code is published under the GNU Lesser General Public License v3.0 or later and hosted on https://github.com/gph82/mdciao, and the documentation, including guides and examples, can be found at https://www.mdciao.org\n",
+  "wordCount" : "187",
+  "inLanguage": "en",
+  "image":"https://gph82.github.io/paper1.png","datePublished": "2025-04-21T00:00:00Z",
+  "dateModified": "2025-04-21T00:00:00Z",
+  "author":[{
+    "@type": "Person",
+    "name": "\u003cb\u003eGuillermo Pérez-Hernández\u003c/b\u003e"
+  }, {
+    "@type": "Person",
+    "name": "Peter W. Hildebrand"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://gph82.github.io/software/article_27/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Guillermo Pérez-Hernández",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://gph82.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" integrity="sha384-wcIxkf4k558AjM3Yz3BBFQUbk/zgIYC2R0QpeeYb+TwlBVMrlgLqwRjRtGZiK7ww" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js" integrity="sha384-hIoBPJpTUs74ddyc4bFZSM1TVlQDA60VBbJS0oA934VSz82sBx1X7kSx2ATBDIyd" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"
+  onload="renderMathInElement(document.body);"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false},
+            {left: "\\begin{equation}", right: "\\end{equation}", display: true},
+            {left: "\\begin{equation*}", right: "\\end{equation*}", display: true},
+            {left: "\\begin{align}", right: "\\end{align}", display: true},
+            {left: "\\begin{align*}", right: "\\end{align*}", display: true},
+            {left: "\\begin{alignat}", right: "\\end{alignat}", display: true},
+            {left: "\\begin{gather}", right: "\\end{gather}", display: true},
+            {left: "\\begin{CD}", right: "\\end{CD}", display: true},
+          ],
+          throwOnError : false
+        });
+    });
+</script>
+ 
+
+
+</head>
+
+<body class="" id="top">
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://gph82.github.io/" accesskey="h" title="Guillermo Pérez-Hernández">
+                <img src="https://gph82.github.io/favicon.ico" alt="" aria-label="logo"
+                    height="18"
+                    width="18">Guillermo Pérez-Hernández</a>
+            <div class="logo-switches">
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://gph82.github.io/papers/" title="Papers">
+                    <span>Papers</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+    <main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      mdciao: Accessible Analysis and Visualization of Molecular Dynamics Simulation Data
+    </h1>
+    <div class="post-meta"><span title='2025-04-21 00:00:00 +0000 UTC'>April 2025</span>&nbsp;&middot;&nbsp;<b>Guillermo Pérez-Hernández</b>,&thinsp;Peter W. Hildebrand&nbsp;&middot;&nbsp;<a href="https://doi.org/10.1371/journal.pcbi.1012837" rel="noopener noreferrer" target="_blank">PLOS Computational Biology</a>
+
+</div>
+  </header> 
+  <div class="post-content"><h5 id="fig-1-things-to-do-after-installing-mdciao">Fig 1: Things to do after installing mdciao</h5>
+<h2><img loading="lazy" src="/software/article_27/paper1.png"></h2>
+<h5 id="doi">DOI</h5>
+<h2 id="101371journalpcbi1012837"><a href="https://doi.org/10.1371/journal.pcbi.1012837" target="_blank">10.1371/journal.pcbi.1012837</a></h2>
+<h5 id="abstract">Abstract</h5>
+<p>We present mdciao, an open-source command line tool and Python Application-Programming-Interface (API) for easy, one-shot analysis and representation of molecular dynamics (MD) simulation data. Building upon the widely used concept of residue-residue contact-frequencies, mdciao offers a wide spectrum of further analysis and representations, enriched with available domain specific annotations. The user-friendly interface offers pre-packaged solutions for non-expert users, while keeping customizability for expert ones. Emphasis has been put into automatically producing annotated, production-ready figures and tables. Furthermore, seamless on-the-fly query and inclusion of domain-specific generic residue numbering for GPCRs, GAIN-domains, G-proteins, and kinases is made possible through online lookups. This allows for easy selection and comparison across different systems, regardless of sequence identity, target residues or domains. Finally, the fully documented Python API allows users to include the basic or advanced mdciao functions in their analysis workflows, and provides numerous examples and Jupyter Notebook Tutorials. The source code is published under the GNU Lesser General Public License v3.0 or later and hosted on <a href="https://github.com/gph82/mdciao" target="_blank">https://github.com/gph82/mdciao</a>, and the documentation, including guides and examples, can be found at <a href="https://www.mdciao.org" target="_blank">https://www.mdciao.org</a></p>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2025 Guillermo Pérez-Hernández</span> ·     
+    <span>
+    Powered by 
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">hugo</a>, <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">papermod</a>, &amp;
+        <a href="https://github.com/pmichaillat/hugo-website/" rel="noopener" target="_blank">hugo-website</a>.
+    </span>
+</footer>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+</html>

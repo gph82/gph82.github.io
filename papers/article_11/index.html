@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Identification of slow molecular order parameters for Markov model construction | Guillermo Pérez-Hernández</title>
+<meta name="keywords" content="">
+<meta name="description" content=" goal in the kinetic characterization of a macromolecular system is the description of its slow relaxation processes via (i) identification of the structural changes involved in these processes and (ii) estimation of the rates or timescales at which these slow processes occur. Most of the approaches to this task, including Markov models, master-equation models, and kinetic network models, start by discretizing the high-dimensional state space and then characterize relaxation processes in terms of the eigenvectors and eigenvalues of a discrete transition matrix. The practical success of such an approach depends very much on the ability to finely discretize the slow order parameters. How can this task be achieved in a high-dimensional configuration space without relying on subjective guesses of the slow order parameters? In this paper, we use the variational principle of conformation dynamics to derive an optimal way of identifying the “slow subspace” of a large set of prior order parameters – either generic internal coordinates or a user-defined set of parameters. Using a variational formulation of conformational dynamics, it is shown that an existing method—the time-lagged independent component analysis—provides the optional solution to this problem. In addition, optimal indicators—order parameters indicating the progress of the slow transitions and thus may serve as reaction coordinates—are readily identified. We demonstrate that the slow subspace is well suited to construct accurate kinetic models of two sets of molecular dynamics simulations, the 6-residue fluorescent peptide MR121-GSGSW and the 30-residue intrinsically disordered peptide kinase inducible domain (KID). The identified optimal indicators reveal the structural changes associated with the slow processes of the molecular system under analysis.">
+<meta name="author" content="Guillermo Pérez-Hernández,&thinsp;Fabian Paul,&thinsp;Toni Giorgino,&thinsp;Gianni De Fabritiis,&thinsp;Frank Noé">
+<link rel="canonical" href="https://gph82.github.io/papers/article_11/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.e900fbd2a4a48707f6ed7d3f90a7537cb744b93777ce030a46251a318a2ef56d.css" integrity="sha256-6QD70qSkhwf27X0/kKdTfLdEuTd3zgMKRiUaMYou9W0=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://gph82.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://gph82.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://gph82.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://gph82.github.io/apple-touch-icon.png">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://gph82.github.io/papers/article_11/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://gph82.github.io/papers/article_11/">
+  <meta property="og:site_name" content="Guillermo Pérez-Hernández">
+  <meta property="og:title" content="Identification of slow molecular order parameters for Markov model construction">
+  <meta property="og:description" content=" goal in the kinetic characterization of a macromolecular system is the description of its slow relaxation processes via (i) identification of the structural changes involved in these processes and (ii) estimation of the rates or timescales at which these slow processes occur. Most of the approaches to this task, including Markov models, master-equation models, and kinetic network models, start by discretizing the high-dimensional state space and then characterize relaxation processes in terms of the eigenvectors and eigenvalues of a discrete transition matrix. The practical success of such an approach depends very much on the ability to finely discretize the slow order parameters. How can this task be achieved in a high-dimensional configuration space without relying on subjective guesses of the slow order parameters? In this paper, we use the variational principle of conformation dynamics to derive an optimal way of identifying the “slow subspace” of a large set of prior order parameters – either generic internal coordinates or a user-defined set of parameters. Using a variational formulation of conformational dynamics, it is shown that an existing method—the time-lagged independent component analysis—provides the optional solution to this problem. In addition, optimal indicators—order parameters indicating the progress of the slow transitions and thus may serve as reaction coordinates—are readily identified. We demonstrate that the slow subspace is well suited to construct accurate kinetic models of two sets of molecular dynamics simulations, the 6-residue fluorescent peptide MR121-GSGSW and the 30-residue intrinsically disordered peptide kinase inducible domain (KID). The identified optimal indicators reveal the structural changes associated with the slow processes of the molecular system under analysis.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="papers">
+    <meta property="article:published_time" content="2013-07-07T00:00:00+00:00">
+    <meta property="article:modified_time" content="2013-07-07T00:00:00+00:00">
+    <meta property="og:image" content="https://gph82.github.io/paper1.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://gph82.github.io/paper1.png">
+<meta name="twitter:title" content="Identification of slow molecular order parameters for Markov model construction">
+<meta name="twitter:description" content=" goal in the kinetic characterization of a macromolecular system is the description of its slow relaxation processes via (i) identification of the structural changes involved in these processes and (ii) estimation of the rates or timescales at which these slow processes occur. Most of the approaches to this task, including Markov models, master-equation models, and kinetic network models, start by discretizing the high-dimensional state space and then characterize relaxation processes in terms of the eigenvectors and eigenvalues of a discrete transition matrix. The practical success of such an approach depends very much on the ability to finely discretize the slow order parameters. How can this task be achieved in a high-dimensional configuration space without relying on subjective guesses of the slow order parameters? In this paper, we use the variational principle of conformation dynamics to derive an optimal way of identifying the “slow subspace” of a large set of prior order parameters – either generic internal coordinates or a user-defined set of parameters. Using a variational formulation of conformational dynamics, it is shown that an existing method—the time-lagged independent component analysis—provides the optional solution to this problem. In addition, optimal indicators—order parameters indicating the progress of the slow transitions and thus may serve as reaction coordinates—are readily identified. We demonstrate that the slow subspace is well suited to construct accurate kinetic models of two sets of molecular dynamics simulations, the 6-residue fluorescent peptide MR121-GSGSW and the 30-residue intrinsically disordered peptide kinase inducible domain (KID). The identified optimal indicators reveal the structural changes associated with the slow processes of the molecular system under analysis.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "",
+      "item": "https://gph82.github.io/papers/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Identification of slow molecular order parameters for Markov model construction",
+      "item": "https://gph82.github.io/papers/article_11/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Identification of slow molecular order parameters for Markov model construction",
+  "name": "Identification of slow molecular order parameters for Markov model construction",
+  "description": " goal in the kinetic characterization of a macromolecular system is the description of its slow relaxation processes via (i) identification of the structural changes involved in these processes and (ii) estimation of the rates or timescales at which these slow processes occur. Most of the approaches to this task, including Markov models, master-equation models, and kinetic network models, start by discretizing the high-dimensional state space and then characterize relaxation processes in terms of the eigenvectors and eigenvalues of a discrete transition matrix. The practical success of such an approach depends very much on the ability to finely discretize the slow order parameters. How can this task be achieved in a high-dimensional configuration space without relying on subjective guesses of the slow order parameters? In this paper, we use the variational principle of conformation dynamics to derive an optimal way of identifying the “slow subspace” of a large set of prior order parameters – either generic internal coordinates or a user-defined set of parameters. Using a variational formulation of conformational dynamics, it is shown that an existing method—the time-lagged independent component analysis—provides the optional solution to this problem. In addition, optimal indicators—order parameters indicating the progress of the slow transitions and thus may serve as reaction coordinates—are readily identified. We demonstrate that the slow subspace is well suited to construct accurate kinetic models of two sets of molecular dynamics simulations, the 6-residue fluorescent peptide MR121-GSGSW and the 30-residue intrinsically disordered peptide kinase inducible domain (KID). The identified optimal indicators reveal the structural changes associated with the slow processes of the molecular system under analysis.",
+  "keywords": [
+    
+  ],
+  "articleBody": "Fig. 5: Kinetic map of the two slowest relaxation processes of the KID peptide DOI 10.1063/1.4811489 Abstract goal in the kinetic characterization of a macromolecular system is the description of its slow relaxation processes via (i) identification of the structural changes involved in these processes and (ii) estimation of the rates or timescales at which these slow processes occur. Most of the approaches to this task, including Markov models, master-equation models, and kinetic network models, start by discretizing the high-dimensional state space and then characterize relaxation processes in terms of the eigenvectors and eigenvalues of a discrete transition matrix. The practical success of such an approach depends very much on the ability to finely discretize the slow order parameters. How can this task be achieved in a high-dimensional configuration space without relying on subjective guesses of the slow order parameters? In this paper, we use the variational principle of conformation dynamics to derive an optimal way of identifying the “slow subspace” of a large set of prior order parameters – either generic internal coordinates or a user-defined set of parameters. Using a variational formulation of conformational dynamics, it is shown that an existing method—the time-lagged independent component analysis—provides the optional solution to this problem. In addition, optimal indicators—order parameters indicating the progress of the slow transitions and thus may serve as reaction coordinates—are readily identified. We demonstrate that the slow subspace is well suited to construct accurate kinetic models of two sets of molecular dynamics simulations, the 6-residue fluorescent peptide MR121-GSGSW and the 30-residue intrinsically disordered peptide kinase inducible domain (KID). The identified optimal indicators reveal the structural changes associated with the slow processes of the molecular system under analysis.\n",
+  "wordCount" : "280",
+  "inLanguage": "en",
+  "image":"https://gph82.github.io/paper1.png","datePublished": "2013-07-07T00:00:00Z",
+  "dateModified": "2013-07-07T00:00:00Z",
+  "author":[{
+    "@type": "Person",
+    "name": "\u003cb\u003eGuillermo Pérez-Hernández\u003c/b\u003e"
+  }, {
+    "@type": "Person",
+    "name": "Fabian Paul"
+  }, {
+    "@type": "Person",
+    "name": "Toni Giorgino"
+  }, {
+    "@type": "Person",
+    "name": "Gianni De Fabritiis"
+  }, {
+    "@type": "Person",
+    "name": "Frank Noé"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://gph82.github.io/papers/article_11/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Guillermo Pérez-Hernández",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://gph82.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" integrity="sha384-wcIxkf4k558AjM3Yz3BBFQUbk/zgIYC2R0QpeeYb+TwlBVMrlgLqwRjRtGZiK7ww" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js" integrity="sha384-hIoBPJpTUs74ddyc4bFZSM1TVlQDA60VBbJS0oA934VSz82sBx1X7kSx2ATBDIyd" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"
+  onload="renderMathInElement(document.body);"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false},
+            {left: "\\begin{equation}", right: "\\end{equation}", display: true},
+            {left: "\\begin{equation*}", right: "\\end{equation*}", display: true},
+            {left: "\\begin{align}", right: "\\end{align}", display: true},
+            {left: "\\begin{align*}", right: "\\end{align*}", display: true},
+            {left: "\\begin{alignat}", right: "\\end{alignat}", display: true},
+            {left: "\\begin{gather}", right: "\\end{gather}", display: true},
+            {left: "\\begin{CD}", right: "\\end{CD}", display: true},
+          ],
+          throwOnError : false
+        });
+    });
+</script>
+ 
+
+
+</head>
+
+<body class="" id="top">
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://gph82.github.io/" accesskey="h" title="Guillermo Pérez-Hernández">
+                <img src="https://gph82.github.io/favicon.ico" alt="" aria-label="logo"
+                    height="18"
+                    width="18">Guillermo Pérez-Hernández</a>
+            <div class="logo-switches">
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://gph82.github.io/papers/" title="Papers">
+                    <span>Papers</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+    <main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Identification of slow molecular order parameters for Markov model construction
+    </h1>
+    <div class="post-meta"><span title='2013-07-07 00:00:00 +0000 UTC'>July 2013</span>&nbsp;&middot;&nbsp;<b>Guillermo Pérez-Hernández</b>,&thinsp;Fabian Paul,&thinsp;Toni Giorgino,&thinsp;Gianni De Fabritiis,&thinsp;Frank Noé&nbsp;&middot;&nbsp;<a href="https://doi.org/10.1063/1.4811489" rel="noopener noreferrer" target="_blank">The Journal of Chemical Physics</a>
+
+</div>
+  </header> 
+  <div class="post-content"><h5 id="fig-5-kinetic-map-of-the-two-slowest-relaxation-processes-of-the-kid-peptide">Fig. 5: Kinetic map of the two slowest relaxation processes of the KID peptide</h5>
+<h2><img loading="lazy" src="/papers/article_11/paper1.png"></h2>
+<h5 id="doi">DOI</h5>
+<h2 id="10106314811489"><a href="https://doi.org/10.1063/1.4811489" target="_blank">10.1063/1.4811489</a></h2>
+<h5 id="abstract">Abstract</h5>
+<p>goal in the kinetic characterization of a macromolecular system is the description of its slow relaxation processes via (i) identification of the structural changes involved in these processes and (ii) estimation of the rates or timescales at which these slow processes occur. Most of the approaches to this task, including Markov models, master-equation models, and kinetic network models, start by discretizing the high-dimensional state space and then characterize relaxation processes in terms of the eigenvectors and eigenvalues of a discrete transition matrix. The practical success of such an approach depends very much on the ability to finely discretize the slow order parameters. How can this task be achieved in a high-dimensional configuration space without relying on subjective guesses of the slow order parameters? In this paper, we use the variational principle of conformation dynamics to derive an optimal way of identifying the “slow subspace” of a large set of prior order parameters – either generic internal coordinates or a user-defined set of parameters. Using a variational formulation of conformational dynamics, it is shown that an existing method—the time-lagged independent component analysis—provides the optional solution to this problem. In addition, optimal indicators—order parameters indicating the progress of the slow transitions and thus may serve as reaction coordinates—are readily identified. We demonstrate that the slow subspace is well suited to construct accurate kinetic models of two sets of molecular dynamics simulations, the 6-residue fluorescent peptide MR121-GSGSW and the 30-residue intrinsically disordered peptide kinase inducible domain (KID). The identified optimal indicators reveal the structural changes associated with the slow processes of the molecular system under analysis.</p>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2025 Guillermo Pérez-Hernández</span> ·     
+    <span>
+    Powered by 
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">hugo</a>, <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">papermod</a>, &amp;
+        <a href="https://github.com/pmichaillat/hugo-website/" rel="noopener" target="_blank">hugo-website</a>.
+    </span>
+</footer>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+</html>

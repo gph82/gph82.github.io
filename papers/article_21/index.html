@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Function and dynamics of the intrinsically disordered carboxyl terminus of β2 adrenergic receptor | Guillermo Pérez-Hernández</title>
+<meta name="keywords" content="">
+<meta name="description" content="dvances in structural biology have provided important mechanistic insights into signaling by the transmembrane core of G-protein coupled receptors (GPCRs); however, much less is known about intrinsically disordered regions such as the carboxyl terminus (CT), which is highly flexible and not visible in GPCR structures. The β2adrenergic receptor’s (β2AR) 71 amino acid CT is a substrate for GPCR kinases and binds β-arrestins to regulate signaling. Here we show that the β2AR CT directly inhibits basal and agonist-stimulated signaling in cell lines lacking β-arrestins. Combining single-molecule fluorescence resonance energy transfer (FRET), NMR spectroscopy, and molecular dynamics simulations, we reveal that the negatively charged β2AR-CT serves as an autoinhibitory factor via interacting with the positively charged cytoplasmic surface of the receptor to limit access to G-proteins. The stability of this interaction is influenced by agonists and allosteric modulators, emphasizing that the CT plays important role in allosterically regulating GPCR activation.">
+<meta name="author" content="Jie Heng,&thinsp;Yunfei Hu,&thinsp;Guillermo Pérez-Hernández,&thinsp;Asuka Inoue,&thinsp;Jiawei Zhao,&thinsp;Xiuyan Ma,&thinsp;Xiaoou Sun,&thinsp;Kouki Kawakami,&thinsp;Tatsuya Ikuta,&thinsp;Jienv Ding,&thinsp;Yujie Yang,&thinsp;Lujia Zhang,&thinsp;Sijia Peng,&thinsp;Xiaogang Niu,&thinsp;Hongwei Li,&thinsp;Ramon Guixà-González,&thinsp;Changwen Jin,&thinsp;Peter W. Hildebrand,&thinsp;Chunlai Chen,&thinsp;Brian K. Kobilka">
+<link rel="canonical" href="https://gph82.github.io/papers/article_21/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.e900fbd2a4a48707f6ed7d3f90a7537cb744b93777ce030a46251a318a2ef56d.css" integrity="sha256-6QD70qSkhwf27X0/kKdTfLdEuTd3zgMKRiUaMYou9W0=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://gph82.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://gph82.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://gph82.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://gph82.github.io/apple-touch-icon.png">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://gph82.github.io/papers/article_21/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://gph82.github.io/papers/article_21/">
+  <meta property="og:site_name" content="Guillermo Pérez-Hernández">
+  <meta property="og:title" content="Function and dynamics of the intrinsically disordered carboxyl terminus of β2 adrenergic receptor">
+  <meta property="og:description" content="dvances in structural biology have provided important mechanistic insights into signaling by the transmembrane core of G-protein coupled receptors (GPCRs); however, much less is known about intrinsically disordered regions such as the carboxyl terminus (CT), which is highly flexible and not visible in GPCR structures. The β2adrenergic receptor’s (β2AR) 71 amino acid CT is a substrate for GPCR kinases and binds β-arrestins to regulate signaling. Here we show that the β2AR CT directly inhibits basal and agonist-stimulated signaling in cell lines lacking β-arrestins. Combining single-molecule fluorescence resonance energy transfer (FRET), NMR spectroscopy, and molecular dynamics simulations, we reveal that the negatively charged β2AR-CT serves as an autoinhibitory factor via interacting with the positively charged cytoplasmic surface of the receptor to limit access to G-proteins. The stability of this interaction is influenced by agonists and allosteric modulators, emphasizing that the CT plays important role in allosterically regulating GPCR activation.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="papers">
+    <meta property="article:published_time" content="2023-04-10T00:00:00+00:00">
+    <meta property="article:modified_time" content="2023-04-10T00:00:00+00:00">
+    <meta property="og:image" content="https://gph82.github.io/paper1.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://gph82.github.io/paper1.png">
+<meta name="twitter:title" content="Function and dynamics of the intrinsically disordered carboxyl terminus of β2 adrenergic receptor">
+<meta name="twitter:description" content="dvances in structural biology have provided important mechanistic insights into signaling by the transmembrane core of G-protein coupled receptors (GPCRs); however, much less is known about intrinsically disordered regions such as the carboxyl terminus (CT), which is highly flexible and not visible in GPCR structures. The β2adrenergic receptor’s (β2AR) 71 amino acid CT is a substrate for GPCR kinases and binds β-arrestins to regulate signaling. Here we show that the β2AR CT directly inhibits basal and agonist-stimulated signaling in cell lines lacking β-arrestins. Combining single-molecule fluorescence resonance energy transfer (FRET), NMR spectroscopy, and molecular dynamics simulations, we reveal that the negatively charged β2AR-CT serves as an autoinhibitory factor via interacting with the positively charged cytoplasmic surface of the receptor to limit access to G-proteins. The stability of this interaction is influenced by agonists and allosteric modulators, emphasizing that the CT plays important role in allosterically regulating GPCR activation.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "",
+      "item": "https://gph82.github.io/papers/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Function and dynamics of the intrinsically disordered carboxyl terminus of β2 adrenergic receptor",
+      "item": "https://gph82.github.io/papers/article_21/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Function and dynamics of the intrinsically disordered carboxyl terminus of β2 adrenergic receptor",
+  "name": "Function and dynamics of the intrinsically disordered carboxyl terminus of β2 adrenergic receptor",
+  "description": "dvances in structural biology have provided important mechanistic insights into signaling by the transmembrane core of G-protein coupled receptors (GPCRs); however, much less is known about intrinsically disordered regions such as the carboxyl terminus (CT), which is highly flexible and not visible in GPCR structures. The β2adrenergic receptor’s (β2AR) 71 amino acid CT is a substrate for GPCR kinases and binds β-arrestins to regulate signaling. Here we show that the β2AR CT directly inhibits basal and agonist-stimulated signaling in cell lines lacking β-arrestins. Combining single-molecule fluorescence resonance energy transfer (FRET), NMR spectroscopy, and molecular dynamics simulations, we reveal that the negatively charged β2AR-CT serves as an autoinhibitory factor via interacting with the positively charged cytoplasmic surface of the receptor to limit access to G-proteins. The stability of this interaction is influenced by agonists and allosteric modulators, emphasizing that the CT plays important role in allosterically regulating GPCR activation.",
+  "keywords": [
+    
+  ],
+  "articleBody": "Supplementary Fig. 8: Variable contacts of the β2AR CT observed in MD simulations. DOI 10.1038/s41467-023-37233-1 Abstract dvances in structural biology have provided important mechanistic insights into signaling by the transmembrane core of G-protein coupled receptors (GPCRs); however, much less is known about intrinsically disordered regions such as the carboxyl terminus (CT), which is highly flexible and not visible in GPCR structures. The β2adrenergic receptor’s (β2AR) 71 amino acid CT is a substrate for GPCR kinases and binds β-arrestins to regulate signaling. Here we show that the β2AR CT directly inhibits basal and agonist-stimulated signaling in cell lines lacking β-arrestins. Combining single-molecule fluorescence resonance energy transfer (FRET), NMR spectroscopy, and molecular dynamics simulations, we reveal that the negatively charged β2AR-CT serves as an autoinhibitory factor via interacting with the positively charged cytoplasmic surface of the receptor to limit access to G-proteins. The stability of this interaction is influenced by agonists and allosteric modulators, emphasizing that the CT plays important role in allosterically regulating GPCR activation.\n",
+  "wordCount" : "164",
+  "inLanguage": "en",
+  "image":"https://gph82.github.io/paper1.png","datePublished": "2023-04-10T00:00:00Z",
+  "dateModified": "2023-04-10T00:00:00Z",
+  "author":[{
+    "@type": "Person",
+    "name": "Jie Heng"
+  }, {
+    "@type": "Person",
+    "name": "Yunfei Hu"
+  }, {
+    "@type": "Person",
+    "name": "\u003cb\u003eGuillermo Pérez-Hernández\u003c/b\u003e"
+  }, {
+    "@type": "Person",
+    "name": "Asuka Inoue"
+  }, {
+    "@type": "Person",
+    "name": "Jiawei Zhao"
+  }, {
+    "@type": "Person",
+    "name": "Xiuyan Ma"
+  }, {
+    "@type": "Person",
+    "name": "Xiaoou Sun"
+  }, {
+    "@type": "Person",
+    "name": "Kouki Kawakami"
+  }, {
+    "@type": "Person",
+    "name": "Tatsuya Ikuta"
+  }, {
+    "@type": "Person",
+    "name": "Jienv Ding"
+  }, {
+    "@type": "Person",
+    "name": "Yujie Yang"
+  }, {
+    "@type": "Person",
+    "name": "Lujia Zhang"
+  }, {
+    "@type": "Person",
+    "name": "Sijia Peng"
+  }, {
+    "@type": "Person",
+    "name": "Xiaogang Niu"
+  }, {
+    "@type": "Person",
+    "name": "Hongwei Li"
+  }, {
+    "@type": "Person",
+    "name": "Ramon Guixà-González"
+  }, {
+    "@type": "Person",
+    "name": "Changwen Jin"
+  }, {
+    "@type": "Person",
+    "name": "Peter W. Hildebrand"
+  }, {
+    "@type": "Person",
+    "name": "Chunlai Chen"
+  }, {
+    "@type": "Person",
+    "name": "Brian K. Kobilka"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://gph82.github.io/papers/article_21/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Guillermo Pérez-Hernández",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://gph82.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" integrity="sha384-wcIxkf4k558AjM3Yz3BBFQUbk/zgIYC2R0QpeeYb+TwlBVMrlgLqwRjRtGZiK7ww" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js" integrity="sha384-hIoBPJpTUs74ddyc4bFZSM1TVlQDA60VBbJS0oA934VSz82sBx1X7kSx2ATBDIyd" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"
+  onload="renderMathInElement(document.body);"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false},
+            {left: "\\begin{equation}", right: "\\end{equation}", display: true},
+            {left: "\\begin{equation*}", right: "\\end{equation*}", display: true},
+            {left: "\\begin{align}", right: "\\end{align}", display: true},
+            {left: "\\begin{align*}", right: "\\end{align*}", display: true},
+            {left: "\\begin{alignat}", right: "\\end{alignat}", display: true},
+            {left: "\\begin{gather}", right: "\\end{gather}", display: true},
+            {left: "\\begin{CD}", right: "\\end{CD}", display: true},
+          ],
+          throwOnError : false
+        });
+    });
+</script>
+ 
+
+
+</head>
+
+<body class="" id="top">
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://gph82.github.io/" accesskey="h" title="Guillermo Pérez-Hernández">
+                <img src="https://gph82.github.io/favicon.ico" alt="" aria-label="logo"
+                    height="18"
+                    width="18">Guillermo Pérez-Hernández</a>
+            <div class="logo-switches">
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://gph82.github.io/papers/" title="Papers">
+                    <span>Papers</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+    <main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Function and dynamics of the intrinsically disordered carboxyl terminus of β2 adrenergic receptor
+    </h1>
+    <div class="post-meta"><span title='2023-04-10 00:00:00 +0000 UTC'>April 2023</span>&nbsp;&middot;&nbsp;Jie Heng,&thinsp;Yunfei Hu,&thinsp;<b>Guillermo Pérez-Hernández</b>,&thinsp;Asuka Inoue,&thinsp;Jiawei Zhao,&thinsp;Xiuyan Ma,&thinsp;Xiaoou Sun,&thinsp;Kouki Kawakami,&thinsp;Tatsuya Ikuta,&thinsp;Jienv Ding,&thinsp;Yujie Yang,&thinsp;Lujia Zhang,&thinsp;Sijia Peng,&thinsp;Xiaogang Niu,&thinsp;Hongwei Li,&thinsp;Ramon Guixà-González,&thinsp;Changwen Jin,&thinsp;Peter W. Hildebrand,&thinsp;Chunlai Chen,&thinsp;Brian K. Kobilka&nbsp;&middot;&nbsp;<a href="https://doi.org/10.1038/s41467-023-37233-1" rel="noopener noreferrer" target="_blank">Nature Communications</a>
+
+</div>
+  </header> 
+  <div class="post-content"><h5 id="supplementary-fig-8-variable-contacts-of-the-β2ar-ct-observed-in-md-simulations">Supplementary Fig. 8: Variable contacts of the β2AR CT observed in MD simulations.</h5>
+<h2><img loading="lazy" src="/papers/article_21/paper1.png"></h2>
+<h5 id="doi">DOI</h5>
+<h2 id="101038s41467-023-37233-1"><a href="https://doi.org/10.1038/s41467-023-37233-1" target="_blank">10.1038/s41467-023-37233-1</a></h2>
+<h5 id="abstract">Abstract</h5>
+<p>dvances in structural biology have provided important mechanistic insights into signaling by the transmembrane core of G-protein coupled receptors (GPCRs); however, much less is known about intrinsically disordered regions such as the carboxyl terminus (CT), which is highly flexible and not visible in GPCR structures. The β2adrenergic receptor’s (β2AR) 71 amino acid CT is a substrate for GPCR kinases and binds β-arrestins to regulate signaling. Here we show that the β2AR CT directly inhibits basal and agonist-stimulated signaling in cell lines lacking β-arrestins. Combining single-molecule fluorescence resonance energy transfer (FRET), NMR spectroscopy, and molecular dynamics simulations, we reveal that the negatively charged β2AR-CT serves as an autoinhibitory factor via interacting with the positively charged cytoplasmic surface of the receptor to limit access to G-proteins. The stability of this interaction is influenced by agonists and allosteric modulators, emphasizing that the CT plays important role in allosterically regulating GPCR activation.</p>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2025 Guillermo Pérez-Hernández</span> ·     
+    <span>
+    Powered by 
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">hugo</a>, <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">papermod</a>, &amp;
+        <a href="https://github.com/pmichaillat/hugo-website/" rel="noopener" target="_blank">hugo-website</a>.
+    </span>
+</footer>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+</html>
